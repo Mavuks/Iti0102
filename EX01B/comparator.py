@@ -1,3 +1,6 @@
+"""comparator"""
+
+
 def comparator(num: float) -> str:
     """
     Compare the given number with 5 and return message depending on the number's value.
@@ -13,4 +16,5 @@ def comparator(num: float) -> str:
     else:
         return "The input number is 5!"
 
-print(comparator (6))
+
+print(comparator(6))
