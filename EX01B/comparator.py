@@ -13,4 +13,4 @@ def comparator(num: float) -> str:
     else:
         return "The input number is 5!"
 
-print (comparator (6))
+print(comparator (6))
