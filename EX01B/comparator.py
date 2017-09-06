@@ -1,4 +1,4 @@
-"""comparator"""
+"""comparator."""
 
 
 def comparator(num: float) -> str:
