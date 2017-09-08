@@ -1,7 +1,6 @@
 import math
 
 """Calculate the value of z."""
-
 def value_of_z(ex, x, y):
 
     """
