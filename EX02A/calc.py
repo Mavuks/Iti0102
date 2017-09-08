@@ -35,4 +35,3 @@ print(value_of_z(1, 0, 0))  # -> 2
 print(value_of_z(2, 50, 1))  # -> 8.774725274725276
 print(value_of_z(3, 99, 99))  # -> 3120247.5768747954
 print(value_of_z(4, 0, 0))  # None
-
