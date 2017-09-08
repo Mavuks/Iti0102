@@ -2,9 +2,7 @@ import math
 
 """Calculate the value of z."""
 
-
 def value_of_z(ex, x, y):
-
     """
     Calculate the value of z with given x and y.
 
@@ -23,7 +21,6 @@ def value_of_z(ex, x, y):
             return ((x / 5) * y ** 4 * (math.log(5)) / (7 * math.sqrt(x ** 2 + y ** 2) + 1))
     else:
             print("sellist ülesannet ei ole!")
-
 
 #testid
 print(value_of_z(1, 0, 0))  # -> 2
