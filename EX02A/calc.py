@@ -19,7 +19,7 @@ def value_of_z(ex, x, y):
     elif ex is 3:
             return ((x / 5) * y ** 4 * (math.log(5)) / (7 * math.sqrt(x ** 2 + y ** 2) + 1))
     else:
-            print ("sellist ülesannet ei ole!")
+            print("sellist ülesannet ei ole!")
 # testid
 
 
