@@ -16,13 +16,13 @@ def value_of_z(ex, x, y):
     # Your code here
 
 
-    if ex == 1:
+ if ex == 1:
         return (x ** y + y ** x)
 
     elif ex is 2:
-        return ((x/5.6)-(y/6.5))
+        return ((x / 5.6) - (y / 6.5))
     elif ex is 3:
-        return ((x/5)*y**4*(math.log(5))/(7* math.sqrt(x**2+y**2)+1))
+        return ((x / 5) * y ** 4 * (math.log(5)) / (7 * math.sqrt(x ** 2 + y ** 2) + 1))
     else:
         print ("sellist ülesannet ei ole!")
 
@@ -35,5 +35,4 @@ print(value_of_z(1, 0, 0))  # -> 2
 print(value_of_z(2, 50, 1))  # -> 8.774725274725276
 print(value_of_z(3, 99, 99))  # -> 3120247.5768747954
 print(value_of_z(4, 0, 0))  # None
-
 
