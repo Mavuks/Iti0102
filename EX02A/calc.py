@@ -12,8 +12,6 @@ def value_of_z(ex, x, y):
     :return: float
     """
     # Your code here
-    pass
-
     if ex is 1:
             return(x ** y + y ** x)
     elif ex is 2:
@@ -23,6 +21,8 @@ def value_of_z(ex, x, y):
     else:
             return "sellist ülesannet ei ole!"
 # testid
+
+
 print(value_of_z(1, 0, 0))  # -> 2
 print(value_of_z(1, 5, 10))  # -> 9865625
 print(value_of_z(2, 50, 1))  # -> 8.774725274725276
