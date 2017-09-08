@@ -2,8 +2,7 @@
 import math
 
 
-def value_of_z(ex, x, y):
-
+def value_of_z (ex, x, y):
     """
     Calculate the value of z with given x and y.
 
@@ -28,6 +27,9 @@ def value_of_z(ex, x, y):
 
 
 print(value_of_z(1, 0, 0))  # -> 2
+print(value_of_z(1, 5, 10))  # -> 9865625
 print(value_of_z(2, 50, 1))  # -> 8.774725274725276
 print(value_of_z(3, 99, 99))  # -> 3120247.5768747954
+print(value_of_z(3, 10, 10))  # -> 321.90384067126877
+print(value_of_z(3, 0, 0))  # -> 0.0
 print(value_of_z(4, 0, 0))  # None
