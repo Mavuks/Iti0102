@@ -1,11 +1,8 @@
 import math
-
 """Calculate the value of z."""
 
 
 def value_of_z(ex, x, y):
-
-
     """
     Calculate the value of z with given x and y.
 
@@ -16,6 +13,8 @@ def value_of_z(ex, x, y):
     """
 
     # Your code here
+    pass
+
     if ex is 1:
             return (x ** y + y ** x)
     elif ex is 2:
