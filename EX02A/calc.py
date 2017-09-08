@@ -16,15 +16,15 @@ def value_of_z(ex, x, y):
     # Your code here
 
 
-    if ex == 1:
-        return (x ** y + y ** x)
+    if ex is 1:
+            return (x ** y + y ** x)
 
- elif ex is 2:
-        return ((x / 5.6) - (y / 6.5))
- elif ex is 3:
-        return ((x / 5) * y ** 4 * (math.log(5)) / (7 * math.sqrt(x ** 2 + y ** 2) + 1))
- else:
-        print ("sellist ülesannet ei ole!")
+    elif ex is 2:
+            return ((x / 5.6) - (y / 6.5))
+    elif ex is 3:
+            return ((x / 5) * y ** 4 * (math.log(5)) / (7 * math.sqrt(x ** 2 + y ** 2) + 1))
+    else:
+            print ("sellist ülesannet ei ole!")
 
 
 
