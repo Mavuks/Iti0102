@@ -2,7 +2,7 @@
 import math
 
 
-def value_of_z (ex, x, y):
+def value_of_z(ex, x, y):
     """
     Calculate the value of z with given x and y.
 
@@ -11,16 +11,15 @@ def value_of_z (ex, x, y):
     :param y: 4
     :return: float
     """
-
     # Your code here
     pass
 
     if ex is 1:
-            return (x ** y + y ** x)
+            return(x ** y + y ** x)
     elif ex is 2:
-            return ((x / 5.6) - (y / 6.5))
+            return((x / 5.6) - (y / 6.5))
     elif ex is 3:
-            return ((x / 5) * y ** 4 * (math.log(5)) / (7 * math.sqrt(x ** 2 + y ** 2) + 1))
+            return((x / 5) * y ** 4 * (math.log(5)) / (7 * math.sqrt(x ** 2 + y ** 2) + 1))
     else:
             return "sellist ülesannet ei ole!"
 # testid
