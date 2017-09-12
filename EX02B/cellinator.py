@@ -1,5 +1,6 @@
 """Conversion from row, col => cell index and vice versa."""
 
+
 def get_cell_index(row, col, row_len):
     """
     Return cell index for row, col and table width.
@@ -12,7 +13,7 @@ def get_cell_index(row, col, row_len):
     :param row_len: number of columns in the table
     :return: cell index at the given location
     """
-    #cell_index = row * row_len + col
+    # cell_index = row * row_len + col
     return (row * row_len + col)
 
 
@@ -28,7 +29,7 @@ def get_row_and_col(cell_index, row_len):
     :return: row index, col index as tuple
     """
     # cell_index = row * row_len + col
-    return
+    return ((cell_index % row_len), (cell_index - (cell_index % row_len)) / row_len)
 
 
 def get_row_len(row, col, cell_index):
@@ -48,9 +49,10 @@ def get_row_len(row, col, cell_index):
     :return: number of columns in the table
     """
 
-    #row_len = (cell_index - col) / row
-    if row is 0 or (cell_index - col) / row < col:
+    # row_len = (cell_index - col) / row
+    if row is 0 or ((cell_index - col) / row) < col:
         return -1
+
 
 if __name__ == '__main__':
 
