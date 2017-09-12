@@ -1,6 +1,7 @@
 """Simple calculator."""
 
 def convert_name(name):
+
     """
     Return a string following the a naming convention.
 
@@ -14,6 +15,7 @@ def convert_name(name):
     else:
         return (name[:3].upper() + "-" + str(len(name)) + name[-2:].lower())
 
+
 def addition(a, b):
     """
     Return an expression that sums the numbers a and b.
@@ -22,6 +24,7 @@ def addition(a, b):
     """
     pass
     return str(a) + " + " + str(b) + " = " + str(a + b)
+
 
 def subtraction(a, b):
     """
@@ -32,6 +35,7 @@ def subtraction(a, b):
     pass
     return str(a) + " - " + str(b) + " = " + str(a - b)
 
+
 def repeat(s: object, n: object) -> object:
     """
     Repeat the input string n times.
@@ -41,6 +45,7 @@ def repeat(s: object, n: object) -> object:
     """
     pass
     return(s * n)
+
 
 def line(width, decorated=False):
     """
