@@ -2,7 +2,6 @@
 
 
 def convert_name(name):
-
     """
     Return a string following the a naming convention.
 
@@ -105,4 +104,3 @@ print(repeat("s", 6))
 print(line(2))
 print(line(4, decorated=True))
 print(line(6, decorated=True))
-
