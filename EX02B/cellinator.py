@@ -28,6 +28,7 @@ def get_row_and_col(cell_index, row_len):
     :param row_len: number of columns in the table
     :return: row index, col index as tuple
     """
+    # cell_index = row * row_len + col
     return
 
 
