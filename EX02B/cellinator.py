@@ -1,5 +1,5 @@
 """Conversion from row, col => cell index and vice versa."""
-import math
+imimport math
 
 def get_cell_index(row, col, row_len):
     """
@@ -28,7 +28,7 @@ def get_row_and_col(cell_index, row_len):
     :param row_len: number of columns in the table
     :return: row index, col index as tuple
     """
-    return (cell_index - ( row * row_len )) and ((cell_index - col) / row)
+    return
 
 
 def get_row_len(row, col, cell_index):
@@ -48,8 +48,8 @@ def get_row_len(row, col, cell_index):
     :return: number of columns in the table
     """
 
-    row_len = (cell_index - col) / row
-    if row is 0 or row_len < col:
+    #row_len = (cell_index - col) / row
+    if row is 0 or (cell_index - col) / row < col:
         return -1
 
 if __name__ == '__main__':
