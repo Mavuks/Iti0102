@@ -1,5 +1,6 @@
 """Simple calculator."""
 
+
 def convert_name(name):
 
     """
@@ -57,12 +58,12 @@ def line(width, decorated=False):
     """
     pass
     if decorated is True:
-     if width <= 1:
-        return ""
-     else:
-        return ">" + repeat("-", width - 2) + "<"
+        if width <= 1:
+            return ""
+        else:
+            return ">" + repeat("-", width - 2) + "<"
     else:
-        return repeat('-', width)
+            return repeat('-', width)
 
 
 def display(a, b, name="unnamed", operation="addition", width=0):
@@ -104,3 +105,4 @@ print(repeat("s", 6))
 print(line(2))
 print(line(4, decorated=True))
 print(line(6, decorated=True))
+
