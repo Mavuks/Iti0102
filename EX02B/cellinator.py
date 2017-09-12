@@ -29,7 +29,7 @@ def get_row_and_col(cell_index, row_len):
     :return: row index, col index as tuple
     """
     # cell_index = row * row_len + col
-    return ((cell_index % row_len), (cell_index - (cell_index % row_len)) / row_len)
+    return ((row_len % cell_index), (cell_index - (row_len % cell_index)) / row_len)
 
 
 def get_row_len(row, col, cell_index):
