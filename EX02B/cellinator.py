@@ -1,5 +1,4 @@
 """Conversion from row, col => cell index and vice versa."""
-imimport math
 
 def get_cell_index(row, col, row_len):
     """
