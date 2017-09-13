@@ -29,7 +29,7 @@ def get_row_and_col(cell_index, row_len):
     :return: row index, col index as tuple
     """
     # cell_index = row * row_len + col
-    return ((row_len % cell_index), (cell_index - (row_len % cell_index)) / row_len)
+    return ((cell_index - (cell_index % row_len)) // row_len), (cell_index % row_len)
 
 
 def get_row_len(row, col, cell_index):
@@ -49,9 +49,11 @@ def get_row_len(row, col, cell_index):
     :return: number of columns in the table
     """
 
-    # row_len = (cell_index - col) / row
+    row_len = (cell_index - col) / row
     if row is 0 or ((cell_index - col) / row) < col:
         return -1
+    else:
+            return row_len
 
 
 if __name__ == '__main__':
