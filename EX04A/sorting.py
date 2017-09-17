@@ -12,8 +12,10 @@ def get_min_len_word(string_list):
     :param string_list: List of Strings to look through.
     :return: Smallest length String from string_list.
     """
-
-    print(min((word for word in string_list if word), key=len))
+    if not string_list:
+        return none
+    string_list.sort(key=len)
+    return string_list[1]
 
 
 def sort_list(string_list):
@@ -26,8 +28,16 @@ def sort_list(string_list):
     :return: Sorted list of Strings.
     """
     # Your Code
-    string_list.sort(key=len)
-    print(string_list)
+    sorted_list = list()
+    while list:
+        if not string_list:
+            break
+
+        min_word = get_min_len_word(string_list)
+        sorted_list.append(min_word)
+        string_list.remove(min_word)
+
+    return sorted_list
 
 if __name__ == '__main__':
 

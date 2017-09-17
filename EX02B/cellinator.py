@@ -60,12 +60,18 @@ if __name__ == '__main__':
     print(get_cell_index(0, 0, 10))  # => 0
     print(get_cell_index(0, 3, 10))  # => 3
     print(get_cell_index(11, 12, 13))  # => 155
+    print(get_cell_index(0, 0, 5))  # => 0
+    print(get_cell_index(1, 3, 5))  # => 8
+    print(get_cell_index(1, 1, 5))  # => 6
+    print(get_cell_index(3, 1, 5))  # => 16
+    print(get_cell_index(114, 56, 19))
 
     print(get_row_and_col(3, 2))  # => (1, 1)
     print(get_row_and_col(2, 3))  # => (0, 2)
     print(get_row_and_col(123, 17))  # => (7, 4)
 
+    print(get_row_len(4, 2, 1))
     print(get_row_len(1, 3, 4))  # => -1
     print(get_row_len(1, 0, 3))  # => 3
     print(get_row_len(12, 0, 12))  # => 1
-    #print(get_row_len(0, 0, 0))
+    print(get_row_len(0, 0, 0))
