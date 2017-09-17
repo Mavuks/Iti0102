@@ -52,7 +52,7 @@ def get_row_len(row, col, cell_index):
     if row == 0 or row * (col + 1) + col > cell_index:
         return -1
     else:
-        return (cell_index - col) / row
+        return int((cell_index - col) / row)
 
 
 if __name__ == '__main__':
