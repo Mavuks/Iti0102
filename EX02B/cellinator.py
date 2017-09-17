@@ -49,7 +49,7 @@ def get_row_len(row, col, cell_index):
     :return: number of columns in the table
     """
 
-    if row == 0 or ((cell_index - col) / row) < col:
+    if row == 0 or row * (col + 1) + col > cell_index:
         return -1
     else:
         return (cell_index - col) / row
