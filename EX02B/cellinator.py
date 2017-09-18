@@ -14,7 +14,10 @@ def get_cell_index(row, col, row_len):
     :return: cell index at the given location
     """
     # cell_index = row * row_len + col
-    return (row * row_len + col)
+    if col < row_len:
+        return  row_len * row + col
+    else:
+        return -1
 
 
 def get_row_and_col(cell_index, row_len):
