@@ -49,10 +49,14 @@ def get_row_len(row, col, cell_index):
     :return: number of columns in the table
     """
 
-    if row == 0 or row * (col + 1) + col > cell_index:
+    if row == 0:
         return -1
     else:
+        row_len = (cell_index - col) / row
+    if col < row_len and row_len % 1 == 0:
         return int((cell_index - col) / row)
+    else:
+        return -1
 
 
 if __name__ == '__main__':
@@ -64,7 +68,7 @@ if __name__ == '__main__':
     print(get_cell_index(1, 3, 5))  # => 8
     print(get_cell_index(1, 1, 5))  # => 6
     print(get_cell_index(3, 1, 5))  # => 16
-    print(get_cell_index(114, 56, 19))
+    print(get_cell_index(9984,1546,71))
 
     print(get_row_and_col(3, 2))  # => (1, 1)
     print(get_row_and_col(2, 3))  # => (0, 2)
