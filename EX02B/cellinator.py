@@ -15,7 +15,7 @@ def get_cell_index(row, col, row_len):
     """
     # cell_index = row * row_len + col
     if col < row_len:
-        return  row_len * row + col
+        return row_len * row + col
     else:
         return -1
 
