@@ -1,6 +1,3 @@
-def time(time_string):
-    return time(time_string)
-
 def seconds(time_string, from_seconds_in_minute):
     a = from_seconds_in_minute
     m, s = time_string.split(':')
@@ -10,13 +7,13 @@ def seconds(time_string, from_seconds_in_minute):
 
 def minute_count(time_string, from_seconds_in_minute, to_seconds_in_minute):
     new = to_seconds_in_minute
-    z = convert(time_string, from_seconds_in_minute, to_seconds_in_minute)
+    z = seconds(time_string, from_seconds_in_minute)
     k = z // new
     return k
 
 def seconds_count(time_string, from_seconds_in_minute, to_seconds_in_minute):
     new = to_seconds_in_minute
-    z = convert(time_string, from_seconds_in_minute, to_seconds_in_minute)
+    z = seconds(time_string, from_seconds_in_minute)
     h = z % new
     return h
 
@@ -28,17 +25,16 @@ def final(time_string, from_seconds_in_minute, to_seconds_in_minute):
 
 
 def convert(time_string, from_seconds_in_minute, to_seconds_in_minute):
+    a = from_seconds_in_minute
+    m, s = time_string.split(':')
+    if str(s) > str (a):
+        return "None"
 
-    minutes, seconds = time(time_string)
-
-
-
-    seconds_to_convert = minutes * from_seconds_in_minute + seconds
-    print(seconds_to_convert)
-    result = final(seconds_to_convert, to_seconds_in_minute)
-    return result
-
-
+    q = minute_count(time_string, from_seconds_in_minute, to_seconds_in_minute)
+    e = seconds_count(time_string, from_seconds_in_minute, to_seconds_in_minute)
+    u = str(q).zfill(2)
+    o = str(e).zfill(2)
+    return f'{u}:{o}'
 
 
 
