@@ -3,6 +3,7 @@
 
 def seconds(time_string, from_seconds_in_minute):
     '''
+    Amount seconds in time_string.
 
     :param time_string: current time as a time_string
     :param from_seconds_in_minute: current amount of seconds in one minute
@@ -15,6 +16,7 @@ def seconds(time_string, from_seconds_in_minute):
 
 def minute_count(time_string, from_seconds_in_minute, to_seconds_in_minute):
     '''
+    Amount minute in new system.
 
     :param time_string: current time as a time_string
     :param from_seconds_in_minute: current amount seconds in one minute
@@ -29,6 +31,7 @@ def minute_count(time_string, from_seconds_in_minute, to_seconds_in_minute):
 
 def seconds_count(time_string, from_seconds_in_minute, to_seconds_in_minute):
     '''
+    Amount seconds in new system.
 
     :param time_string: current time as a time_string
     :param from_seconds_in_minute: current amount seconds in one minute
@@ -43,6 +46,7 @@ def seconds_count(time_string, from_seconds_in_minute, to_seconds_in_minute):
 
 def final(time_string, from_seconds_in_minute, to_seconds_in_minute):
     '''
+    New time_String.
 
     :param time_string: current time as a time_string
     :param from_seconds_in_minute: current amount seconds in one minute
