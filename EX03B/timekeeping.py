@@ -27,7 +27,7 @@ def final(time_string, from_seconds_in_minute, to_seconds_in_minute):
 def convert(time_string, from_seconds_in_minute, to_seconds_in_minute):
     a = from_seconds_in_minute
     m, s = time_string.split(':')
-    if str(s) > str (a):
+    if str(s) >= str (a):
         return "None"
 
     q = minute_count(time_string, from_seconds_in_minute, to_seconds_in_minute)
