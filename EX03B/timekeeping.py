@@ -71,6 +71,8 @@ def convert(time_string, from_seconds_in_minute, to_seconds_in_minute):
     m, s = time_string.split(':')
     if str(s) > str(a):
         return "None"
+    elif str(a) == str(0):
+        return "None"
     elif str(s) == str(a):
         return "None"
 
