@@ -10,8 +10,8 @@ def seconds(time_string, from_seconds_in_minute):
     :return:amount seconds
     """
     a = from_seconds_in_minute
-    mm, ss = time_string.split(':')
-    return (int(mm) * a + int(ss))
+    m, s = time_string.split(':')
+    return (int(m) * a + int(s))
 
 
 def minute_count(time_string, from_seconds_in_minute, to_seconds_in_minute):
@@ -68,12 +68,12 @@ def convert(time_string, from_seconds_in_minute, to_seconds_in_minute):
     :return: converted time_String
     """
     a = from_seconds_in_minute
-    mm, ss = time_string.split(':')
-    if str(ss) > str(a):
+    m, s = time_string.split(':')
+    if str(s) > str(a):
         return "None"
     elif str(a) == str(0):
         return "None"
-    elif str(ss) == str(a):
+    elif str(s) == str(a):
         return "None"
 
     q = minute_count(time_string, from_seconds_in_minute, to_seconds_in_minute)
