@@ -69,21 +69,16 @@ def convert(time_string, from_seconds_in_minute, to_seconds_in_minute):
     """
     a = from_seconds_in_minute
     m, s = time_string.split(':')
-    if str(s) > str(a):
+    if str(s) >= str(a):
         return None
-    elif str(a) == str(0):
-        return None
-    elif str(s) == str(a):
-        return None
+
 
     q = minute_count(time_string, from_seconds_in_minute, to_seconds_in_minute)
     e = seconds_count(time_string, from_seconds_in_minute, to_seconds_in_minute)
     u = str(q).zfill(2)
     o = str(e).zfill(2)
-    if str(s) == 1:
-        return f'{q}:{00}'
-    else:
-        return f'{u}:{o}'
+
+    return f'{u}:{o}'
 
 
 print(convert('12:12', 20, 30))
