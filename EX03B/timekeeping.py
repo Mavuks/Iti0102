@@ -69,8 +69,11 @@ def convert(time_string, from_seconds_in_minute, to_seconds_in_minute):
     """
     a = from_seconds_in_minute
     m, s = time_string.split(':')
-    if str(s) >= str(a):
+    if str(s) > str(a):
         return "None"
+    elif str(s) == str(a):
+        return "None"
+
 
 
     q = minute_count(time_string, from_seconds_in_minute, to_seconds_in_minute)
@@ -85,4 +88,4 @@ def convert(time_string, from_seconds_in_minute, to_seconds_in_minute):
 print(convert('12:12', 20, 30))
 print(convert('03:40', 60, 3))
 print(convert('03:61', 60, 3))
-print(convert('00:53', 60, 1))
+print(convert('03:40', 40, 10))
