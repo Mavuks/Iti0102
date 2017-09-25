@@ -74,7 +74,6 @@ def convert(time_string, from_seconds_in_minute, to_seconds_in_minute):
     elif str(s) == str(a):
         return "None"
 
-
     q = minute_count(time_string, from_seconds_in_minute, to_seconds_in_minute)
     e = seconds_count(time_string, from_seconds_in_minute, to_seconds_in_minute)
     u = str(q).zfill(2)
