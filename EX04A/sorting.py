@@ -2,7 +2,7 @@
 
 
 def get_min_len_word(string_list):
-   """
+    """
     Function to find and return the minimum length word in string_list.
 
     If two Strings are the same length, the String appearing first must also
