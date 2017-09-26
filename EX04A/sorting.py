@@ -13,9 +13,9 @@ def get_min_len_word(string_list):
     :return: Smallest length String from string_list.
     """
     if not string_list:
-        return none
+      return None
     string_list.sort(key=len)
-    return string_list[1]
+    return string_list[0]
 
 
 def sort_list(string_list):
@@ -28,6 +28,7 @@ def sort_list(string_list):
     :return: Sorted list of Strings.
     """
     # Your Code
+
     sorted_list = list()
     while list:
         if not string_list:
@@ -42,9 +43,10 @@ def sort_list(string_list):
 if __name__ == '__main__':
 
 
-    get_min_len_word(['Mary', 'had', 'a', 'little', 'lamb'])
-    get_min_len_word(['Hi', 'there'])
-    get_min_len_word(['Hello', 'there'])
-    sort_list(['aaa', 'bb', 'c'])
-    sort_list(['Hello', 'there'])
-    sort_list(['Mary', 'had', 'a', 'little', 'lamb'])
+    print(get_min_len_word(['Mary', 'had', 'a', 'little', 'lamb']))
+    print(get_min_len_word(['Hi', 'there']))
+    print(get_min_len_word(['Hello', 'there']))
+    print(sort_list(['aaa', 'bb', 'c']))
+    print(sort_list(['Hello', 'there']))
+    print(sort_list(['Mary', 'had', 'a', 'little', 'lamb']))
+    print(get_min_len_word([]))
