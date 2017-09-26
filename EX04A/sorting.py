@@ -2,8 +2,7 @@
 
 
 def get_min_len_word(string_list):
-
-    """
+   """
     Function to find and return the minimum length word in string_list.
 
     If two Strings are the same length, the String appearing first must also
@@ -13,7 +12,7 @@ def get_min_len_word(string_list):
     :return: Smallest length String from string_list.
     """
     if not string_list:
-      return None
+        return None
     string_list.sort(key=len)
     return string_list[0]
 
@@ -40,8 +39,8 @@ def sort_list(string_list):
 
     return sorted_list
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
 
     print(get_min_len_word(['Mary', 'had', 'a', 'little', 'lamb']))
     print(get_min_len_word(['Hi', 'there']))
