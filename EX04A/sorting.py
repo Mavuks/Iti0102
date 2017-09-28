@@ -42,7 +42,7 @@ def sort_list(string_list):
 
 if __name__ == '__main__':
 
-    print(get_min_len_word(['Mary', 'had', 'a', 'little', 'lamb']))
+    print(get_min_len_word(['Mary', 'had', ', 'little', 'lamb']))
     print(get_min_len_word(['Hi', 'there']))
     print(get_min_len_word(['Hello', 'there']))
     print(sort_list(['aaa', 'bb', 'c']))
