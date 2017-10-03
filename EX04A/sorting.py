@@ -28,21 +28,13 @@ def sort_list(string_list):
     """
     # Your Code
 
-    sorted_list = list()
-    while list:
-        if not string_list:
-            break
-
-        min_word = get_min_len_word(string_list)
-        sorted_list.append(min_word)
-        string_list.remove(min_word)
-
-    return sorted_list
+    get_min_len_word(string_list)
+    return string_list
 
 
 if __name__ == '__main__':
 
-    print(get_min_len_word(['Mary', 'had', ', 'little', 'lamb']))
+    print(get_min_len_word(['Mary', 'had',  'little', 'lamb']))
     print(get_min_len_word(['Hi', 'there']))
     print(get_min_len_word(['Hello', 'there']))
     print(sort_list(['aaa', 'bb', 'c']))
