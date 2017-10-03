@@ -10,6 +10,13 @@ def scramble_sentence(sentence: str) -> str:
     """
     # Your code
     pass
+    l = list(sentence[-1])
+    lause_list = sentence.split()
+    return_list = []
+    for lause in lause_list:
+        return_list.append(scramble_word(lause))
+    ''.join(return_list)
+    return return_list + l
 
 
 def scramble_word(word: str) -> str:
