@@ -58,4 +58,3 @@ if __name__ == '__main__':
     print(scramble_word("CoOol"))  # -> "CoOol"
     print(scramble_word("aBAcCv"))
     print(scramble_word("phenomena"))
-
