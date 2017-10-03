@@ -23,7 +23,6 @@ def scramble_word(word: str) -> str:
     :return: alphabetically scrambled word
     """
     # Your code
-
     foo1 = list(word[1:-2])
     foo = list(word[1:-1])
     foo = sorted(foo, key=str.lower)
