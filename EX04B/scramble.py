@@ -1,3 +1,6 @@
+"""scrable."""
+
+
 def scramble_sentence(sentence: str) -> str:
     """
     Function to change all words in sentence using scramble_word() function.
@@ -53,7 +56,7 @@ if __name__ == '__main__':
     print(scramble_word("putukas"))
     print(scramble_word("lammas."))
     print(scramble_word("lammas!"))
-    print(scramble_word("Lammas!"))
+    print(scramble_word("Lammas;"))
     print(scramble_word("Mo'uSE!"))  # -> Mo'SuE!
     print(scramble_word("CoOol"))  # -> "CoOol"
     print(scramble_word("aBAcCv"))
