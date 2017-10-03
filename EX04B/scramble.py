@@ -27,18 +27,26 @@ def scramble_word(word: str) -> str:
     foo = list(word[1:-1])
     foo = sorted(foo, key=str.lower)
     foo1 = sorted(foo1, key=str.lower)
-    i = word.find("'")
 
+    i = 0
+    for c in word:
+        if not c.isalpha():
+            i += 1
+    if len(word) - i > 7 or len(word) - i <= 3:
+        return word
 
     if word[-1].isalpha():
-        return word[0] + ''.join(foo) + word[-1]
+        if word.find("'") == -1:
+            return word[0] + ''.join(foo) + word[-1]
+        else:
+            k = word.index("'")
+            n = word.replace("'", '')
+            sorted_word = n[0] + ''.join(sorted(list(n[1:-1]), key=str.lower)) + n[-1]
+            sorted_list = list(sorted_word)
+            sorted_list.insert(k, "'")
+            return ''.join(sorted_list)
     else:
         return word[0] + ''.join(foo1) + word[-2]
-
-
-
-
-
 
 
 if __name__ == '__main__':
@@ -51,3 +59,5 @@ if __name__ == '__main__':
     print(scramble_word("Mo'uSE!"))  # -> Mo'SuE!
     print(scramble_word("CoOol"))  # -> "CoOol"
     print(scramble_word("aBAcCv"))
+    print(scramble_word("phenomena"))
+
