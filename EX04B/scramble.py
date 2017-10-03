@@ -23,14 +23,21 @@ def scramble_word(word: str) -> str:
     :return: alphabetically scrambled word
     """
     # Your code
+
     foo1 = list(word[1:-2])
     foo = list(word[1:-1])
-    foo.sort()
-    foo1.sort()
-    if word[-1] == "." or "," or "!" or "?" or ";" or "," or '"':
-        return word[0] + ''.join(foo1) + word[-2]
-    else:
+    foo = sorted(foo, key=str.lower)
+    foo1 = sorted(foo1, key=str.lower)
+    i = word.find("'")
+
+
+    if word[-1].isalpha():
         return word[0] + ''.join(foo) + word[-1]
+    else:
+        return word[0] + ''.join(foo1) + word[-2]
+
+
+
 
 
 
@@ -41,5 +48,7 @@ if __name__ == '__main__':
     print(scramble_word("putukas"))
     print(scramble_word("lammas."))
     print(scramble_word("lammas!"))
-    #print(scramble_word("Mo'uSE!"))  # -> Mo'SuE!
-    #print(scramble_word("CoOol"))  # -> "CoOol"
+    print(scramble_word("Lammas!"))
+    print(scramble_word("Mo'uSE!"))  # -> Mo'SuE!
+    print(scramble_word("CoOol"))  # -> "CoOol"
+    print(scramble_word("aBAcCv"))
