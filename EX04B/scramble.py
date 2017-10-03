@@ -14,8 +14,7 @@ def scramble_sentence(sentence: str) -> str:
     return_list = []
     for lause in lause_list:
         return_list.append(scramble_word(lause))
-    ''.join(return_list)
-    return return_list
+    return ' '.join(return_list) + sentence[-1]
 
 
 def scramble_word(word: str) -> str:
