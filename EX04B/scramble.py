@@ -1,5 +1,3 @@
-import random
-
 def scramble_sentence(sentence: str) -> str:
     """
     Function to change all words in sentence using scramble_word() function.
@@ -50,8 +48,8 @@ def scramble_word(word: str) -> str:
 
 
 if __name__ == '__main__':
-   # print(scramble_sentence("Hey, how's it going?"))  # -> Hey, how's it ginog?
-    #print(scramble_sentence("The phenomenal power of the human mind."))  # -> The phenomenal peowr of the hamun mind.
+    print(scramble_sentence("Hey, how's it going?"))  # -> Hey, how's it ginog?
+    print(scramble_sentence("The phenomenal power of the human mind."))  # -> The phenomenal peowr of the hamun mind.
     print(scramble_word("putukas"))
     print(scramble_word("lammas."))
     print(scramble_word("lammas!"))
