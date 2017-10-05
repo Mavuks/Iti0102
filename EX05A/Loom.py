@@ -1,8 +1,10 @@
+"""Loom."""
 import turtle
 turtle.speed(100)
 t = turtle
 
 def turtle_head():
+'''Pea'''
     t.color("forestgreen")
     t.begin_fill()
     t.penup()
@@ -15,9 +17,9 @@ def turtle_head():
     t.penup()
 
 
-
 def turtle_face():
-    t.goto(25,250)
+'''Nägu'''
+    t.goto(25, 250)
     t.pendown()
     t.color("black")
     t.begin_fill()
@@ -25,14 +27,14 @@ def turtle_face():
         t.forward(15)
         t.left(90)
     t.penup()
-    t.goto(70,250)
+    t.goto(70, 250)
     t.pendown()
     for i in range(4):
         t.forward(15)
         t.left(90)
     t.end_fill()
     t.penup()
-    t.goto(40,250)
+    t.goto(40, 250)
     t.begin_fill()
     t.pendown()
     t.forward(30)
@@ -62,6 +64,7 @@ def turtle_face():
     t.penup()
 
 def turtle_body():
+'''Keha'''
     t.color("forestgreen")
     t.begin_fill()
     t.goto(20, 180)
@@ -87,6 +90,7 @@ def turtle_body():
     t.goto(-20, -20)
 
 def turtle_jalad():
+'''Jalad'''
     t.pendown()
     t.pensize(5)
     t.pendown()
@@ -104,7 +108,7 @@ def turtle_jalad():
     t.forward(20)
     t.end_fill()
     t.penup()
-    t.goto(130,-60)
+    t.goto(130, -60)
     t.begin_fill()
     t.pendown()
     t.forward(20)
@@ -116,12 +120,12 @@ def turtle_jalad():
     t.forward(60)
     t.end_fill()
     t.penup()
-    t.goto(0,0)
-
+    t.goto(0, 0)
 
 
 def turtle_ears():
-    t.goto(25,290)
+'''Kõrvad'''
+    t.goto(25, 290)
     t.color("Green")
     t.begin_fill()
     t.pendown()
@@ -129,7 +133,7 @@ def turtle_ears():
         t.forward(15)
         t.right(90)
     t.penup()
-    t.goto(70,290)
+    t.goto(70, 290)
     t.pendown()
     for i in range(4):
         t.forward(15)
@@ -139,7 +143,8 @@ def turtle_ears():
 
 
 def turtle_hands():
-    t.goto(20,130)
+'''Käed'''
+    t.goto(20, 130)
     t.pendown()
     t.color("darkgreen")
     t.begin_fill()
@@ -153,7 +158,7 @@ def turtle_hands():
     t.forward(15)
     t.end_fill()
     t.penup()
-    t.goto(20,60)
+    t.goto(20, 60)
     t.pendown()
     t.color("black")
     t.begin_fill()
@@ -167,7 +172,7 @@ def turtle_hands():
     t.forward(15)
     t.end_fill()
     t.penup()
-    t.goto(85,130)
+    t.goto(85, 130)
     t.pendown()
     t.color("darkgreen")
     t.begin_fill()
@@ -180,7 +185,7 @@ def turtle_hands():
     t.forward(70)
     t.end_fill()
     t.penup()
-    t.goto(85,60)
+    t.goto(85, 60)
     t.color("black")
     t.begin_fill()
     t.pendown()
@@ -196,9 +201,9 @@ def turtle_hands():
     t.penup()
 
 
-
 def turtle_saba():
-    t.goto(15,0)
+'''Saba'''
+    t.goto(15, 0)
     t.color("forestgreen")
     t.pendown()
     t.begin_fill()
@@ -207,7 +212,7 @@ def turtle_saba():
         t.right(90)
     t.end_fill()
     t.penup()
-    t.goto(-5,15)
+    t.goto(-5, 15)
     t.color("darkgreen")
     t.begin_fill()
     t.pendown()
@@ -215,10 +220,7 @@ def turtle_saba():
         t.forward(15)
         t.right(90)
     t.end_fill()
-
     t.penup()
-
-
     t.done()
 
 
