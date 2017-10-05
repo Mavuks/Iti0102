@@ -4,7 +4,7 @@ turtle.speed(100)
 t = turtle
 
 def turtle_head():
-'''Pea'''
+    '''Pea'''
     t.color("forestgreen")
     t.begin_fill()
     t.penup()
@@ -18,7 +18,7 @@ def turtle_head():
 
 
 def turtle_face():
-'''Nägu'''
+    '''Nägu'''
     t.goto(25, 250)
     t.pendown()
     t.color("black")
@@ -64,7 +64,7 @@ def turtle_face():
     t.penup()
 
 def turtle_body():
-'''Keha'''
+    '''Keha'''
     t.color("forestgreen")
     t.begin_fill()
     t.goto(20, 180)
@@ -90,7 +90,7 @@ def turtle_body():
     t.goto(-20, -20)
 
 def turtle_jalad():
-'''Jalad'''
+    '''Jalad'''
     t.pendown()
     t.pensize(5)
     t.pendown()
@@ -124,7 +124,7 @@ def turtle_jalad():
 
 
 def turtle_ears():
-'''Kõrvad'''
+    '''Kõrvad'''
     t.goto(25, 290)
     t.color("Green")
     t.begin_fill()
@@ -143,7 +143,7 @@ def turtle_ears():
 
 
 def turtle_hands():
-'''Käed'''
+    '''Käed'''
     t.goto(20, 130)
     t.pendown()
     t.color("darkgreen")
@@ -202,7 +202,7 @@ def turtle_hands():
 
 
 def turtle_saba():
-'''Saba'''
+    '''Saba'''
     t.goto(15, 0)
     t.color("forestgreen")
     t.pendown()
