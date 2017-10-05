@@ -55,7 +55,7 @@ def final(time_string, from_seconds_in_minute, to_seconds_in_minute):
     """
     k = minute_count(time_string, from_seconds_in_minute, to_seconds_in_minute)
     h = seconds_count(time_string, from_seconds_in_minute, to_seconds_in_minute)
-    return f'{str(k).zfill(2) }:{str(h).zfill(2)}'
+    return f'{int(k).zfill(2) }:{int(h).zfill(2)}'
 
 
 def convert(time_string, from_seconds_in_minute, to_seconds_in_minute):

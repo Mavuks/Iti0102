@@ -29,11 +29,6 @@ def scramble_word(word: str) -> str:
     :return: alphabetically scrambled word
     """
     # Your code
-    foo1 = list(word[1:-2])
-    foo = list(word[1:-1])
-    foo = sorted(foo, key=str.lower)
-    foo1 = sorted(foo1, key=str.lower)
-
     i = 0
     for c in word:
         if not c.isalpha():
@@ -42,17 +37,23 @@ def scramble_word(word: str) -> str:
         return word
 
     if word[-1].isalpha():
-        if word.find("'") == -1:
-            return word[0] + ''.join(foo) + word[-1]
-        else:
-            k = word.index("'")
-            n = word.replace("'", '')
-            sorted_word = n[0] + ''.join(sorted(list(n[1:-1]), key=str.lower)) + n[-1]
-            sorted_list = list(sorted_word)
-            sorted_list.insert(k, "'")
-            return ''.join(sorted_list)
+        foo = list(word[1:-1])
+        foo = sorted(foo, key=str.lower)
+        bacon = -1
     else:
-        return word[0] + ''.join(foo1) + word[-2]
+        foo = list(word[1:-2])
+        foo = sorted(foo, key=str.lower)
+        bacon = -2
+
+    if word.find("'") == -1:
+        return word[0] + ''.join(foo) + word[bacon:]
+    else:
+        k = word.index("'")
+        n = word.replace("'", "")
+        sorted_word = word[0] + ''.join(sorted(n[1:bacon], key=str.lower)) + word[bacon:]
+        sorted_list = list(sorted_word)
+        sorted_list.insert(k, "'")
+        return ''.join(sorted_list)
 
 
 if __name__ == '__main__':
@@ -64,5 +65,5 @@ if __name__ == '__main__':
     print(scramble_word("Lammas;"))
     print(scramble_word("Mo'uSE!"))  # -> Mo'SuE!
     print(scramble_word("CoOol"))  # -> "CoOol"
-    print(scramble_word("aBAcCv"))
+    print(scramble_word("don't,"))
     print(scramble_word("phenomena"))
