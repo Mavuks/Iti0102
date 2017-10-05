@@ -9,12 +9,12 @@ def scramble_sentence(sentence: str) -> str:
     :return: scrambled sentence
     """
     # Your code
-    pass
     lause_list = sentence.split()
     return_list = []
     for lause in lause_list:
         return_list.append(scramble_word(lause))
-    return ' '.join(return_list) + sentence[-1]
+        return_list.append(" ")
+    return ''.join(return_list[:-1])
 
 
 def scramble_word(word: str) -> str:
