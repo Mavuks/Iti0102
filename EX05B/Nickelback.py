@@ -1,3 +1,6 @@
+"""Diagramm."""
+
+
 import calendar
 import locale
 import turtle
