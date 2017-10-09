@@ -230,5 +230,7 @@ def main():
     draw_graph(turtle, -500, -200, 0)
 
 if __name__ == "__main__":
+
+
     main()
 
