@@ -27,7 +27,7 @@ def draw_graph(pencil: turtle.Turtle, posx, posy, data_list):
     t.penup()
     t.goto(posx, posy)
     t.pendown()
-    draw_bars(turtle,data_list)
+    draw_bars(turtle, data_list)
     draw_legend(turtle, data_list)
     t.done()
 
@@ -49,7 +49,7 @@ def draw_legend(pencil: turtle.Turtle, data_list):
         t.left(90)
     t.penup()
     t.goto(-110, 100)
-    t.write(get_month_name(1), True),t.write(":    ", True),  t.write(data_list[0], True), t.write(" €")
+    t.write(get_month_name(1), True), t.write(":    ", True), t.write(data_list[0], True), t.write(" €")
     t.goto(-110, 80)
     t.write(get_month_name(2), True), t.write(":    ", True), t.write(data_list[1], True), t.write(" €")
     t.goto(-110, 60)
@@ -222,8 +222,6 @@ def draw_bars(pencil: turtle.Turtle, data_list):
     t.end_fill()
     t.color("black")
     t.penup()
-
-
 
 
 
