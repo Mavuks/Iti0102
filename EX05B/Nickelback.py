@@ -5,6 +5,7 @@ t = turtle
 t.speed(100)
 data_list = [100, 50, 150, 300, 200, 100, 50, 150, 300, 200.9, 200, 100]
 
+
 def get_month_name(month_no):
     """Convert a month's numeric value into its Estonian name as a string."""
     locale.setlocale(locale.LC_TIME, "et-EE")
@@ -28,11 +29,8 @@ def draw_graph(pencil: turtle.Turtle, posx, posy, data_list):
     t.pendown()
     draw_bars(turtle,data_list)
     draw_legend(turtle, data_list)
-
-
-
-
     t.done()
+
 
 def draw_legend(pencil: turtle.Turtle, data_list):
     """
@@ -52,7 +50,7 @@ def draw_legend(pencil: turtle.Turtle, data_list):
     t.penup()
     t.goto(-110, 100)
     t.write(get_month_name(1), True),t.write(":    ", True),  t.write(data_list[0], True), t.write(" €")
-    t.goto(-110,80)
+    t.goto(-110, 80)
     t.write(get_month_name(2), True), t.write(":    ", True), t.write(data_list[1], True), t.write(" €")
     t.goto(-110, 60)
     t.write(get_month_name(3), True), t.write(":    ", True), t.write(data_list[2], True), t.write(" €")
@@ -236,4 +234,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
