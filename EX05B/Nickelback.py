@@ -72,7 +72,7 @@ def draw_bars(pencil: turtle.Turtle, data_list):
     data_list -- the data as a list of numeric values
     """
     # Your code here
-    color = ["red", "orange", "yellow", "green", "violet", "blue", "deeppink","aqua", "brown","gold"]
+    color = ["red", "orange", "yellow", "green", "violet", "blue", "deeppink", "aqua", "brown", "gold"]
     for i in data_list:
         t.begin_fill()
         t.color(random.choice(color))
@@ -88,7 +88,6 @@ def draw_bars(pencil: turtle.Turtle, data_list):
         t.end_fill()
         t.backward(30)
         t.setheading(0)
-
 
 
 def main():
