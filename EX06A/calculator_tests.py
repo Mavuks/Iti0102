@@ -107,3 +107,8 @@ def test_line_decorated():
     assert calculator.line(6, decorated=True) == '>----<'
 
 
+def test_line_not_decorated_small():
+    """Test line not decorated small."""
+    assert calculator.line(3, decorated=False) ='---'
+
+

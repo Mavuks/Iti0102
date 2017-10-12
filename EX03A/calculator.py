@@ -102,6 +102,6 @@ print(addition(5, 6))
 print(subtraction(200, 45))
 print(repeat("s", 0))
 print(line(2))
-print(line(4, decorated=True))
+print(line(0, decorated=True))
 print(line(6, decorated=True))
 
