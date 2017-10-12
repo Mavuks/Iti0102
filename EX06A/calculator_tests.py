@@ -89,4 +89,4 @@ def test_repeat_zero():
 
 def test_repeat_empty_string():
     """Repeat empty string."""
-    assert calculator.repeat("", 1) == " "
+    assert calculator.repeat("", 1) == ' '
