@@ -94,7 +94,7 @@ def test_repeat_empty_string():
 
 def test_line_empty_decorated():
     """Line empty"""
-    assert calculator.line(0, decorated=True) == ''
+    assert calculator.line(0, decorated=False) == ''
 
 
 def test_line_not_decorated():
@@ -110,5 +110,17 @@ def test_line_decorated():
 def test_line_not_decorated_small():
     """Test line not decorated small."""
     assert calculator.line(3, decorated=False) == '---'
+
+
+def test_display_wrong_width():
+    """Test display width."""
+    assert calculator.display(3, 2, width=20) == '''        UNN-7ed
+    >------------------<
+    |   3 + 2 = 5       |
+    --------------------
+    
+    
+    
+    '''
 
 
