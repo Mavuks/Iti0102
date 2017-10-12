@@ -89,4 +89,14 @@ def test_repeat_zero():
 
 def test_repeat_empty_string():
     """Repeat empty string."""
-    assert calculator.repeat("") == ''
+    assert calculator.repeat("", 1) == ''
+
+
+def test_line_empty_decorated():
+    """Line empty"""
+    assert calculator.line(1, decorated=True) == ''
+
+
+def test_line_not_decorated():
+    """Test not decorated"""
+    assert calculator.line(2, decorated=False) == "--"
