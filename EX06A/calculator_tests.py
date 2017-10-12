@@ -1,12 +1,21 @@
+"""Calculator test."""
+
+
 import calculator
 
+
 def test_repeat_zero_length():
+    """Tere."""
     # TODO: assert here something
     pass
 
+
 def test_repeat_negative_length():
+    """fvdsf"""
     # TODO: assert here something
     pass
+
+
 def test_convert_name_savisaar():
     """Test converting name Savisaar."""
     assert calculator.convert_name('Savisaar') == 'SAV-8ar'
@@ -111,6 +120,7 @@ def test_line_decorated_small():
     """Test line decorated small"""
     assert calculator.line(3, decorated=True) == '>-<'
 
+
 def test_line_not_decorated_small():
     """Test line not decorated small."""
     assert calculator.line(3, decorated=False) == '---'
@@ -119,6 +129,7 @@ def test_line_not_decorated_small():
 def test_display_wrong_width():
     """Test display width."""
     assert '>------------------<' in calculator.display(3, 2, width=20)
+
 
 def test_display_operation_other():
     """Test display operation other."""
@@ -133,6 +144,3 @@ def test_display_operation_addition():
 def test_display_operation_subtraction():
     """Test display operation subtraction."""
     assert '|4 - 2 = 2|' in calculator.display(4, 2, operation="subtraction")
-
-
-
