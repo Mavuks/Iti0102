@@ -80,3 +80,13 @@ def test_subtraction_negative_b():
 def test_repeat_negative():
     """Repeat negative."""
     assert calculator.repeat("s", -1) == ''
+
+
+def test_repeat_zero():
+    """Repeat zero."""
+    assert calculator.repeat("s", 0) == ''
+
+
+def test_repeat_empty_string():
+    """Repeat empty string."""
+    assert calculator.repeat("", 1) == " "
