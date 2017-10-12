@@ -114,13 +114,20 @@ def test_line_not_decorated_small():
 
 def test_display_wrong_width():
     """Test display width."""
-    assert calculator.display(3, 2, width=20) == '''        UNN-7ed
+    assert calculator.display(3, 2, name="unnamed", width=20) == '''        UNN-7ed
     >------------------<
-    |   3 + 2 = 5       |
-    --------------------
-    
-    
-    
+    |   3 + 2 = 5      |
+    --------------------     
     '''
+
+def test_display_operation_other():
+    """Test display operation other."""
+    assert calculator.display(3, 2, width=20) == 'ERROR'
+
+
+#def test_display_operation_addition():
+   # """Test display operation addition."""
+   # assert calculator.display(3, 2) == ''
+
 
 
