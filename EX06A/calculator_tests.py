@@ -34,10 +34,13 @@ def test_convert_name_error_with_len3():
 
 def test_convert_name_two_digits_str_len():
     """Test name with lenght of 2."""
-    assert calculator.convert_name('AA') == 'ERROR'
+    assert calculator.convert_name('22') == 'ERROR'
 
 
 def test_convert_name_addition_negative_numbers_fail():
     """Test addition negative numbers"""
     assert calculator.convert_name(-3, -4) =='-3 + -4 = -7'
+
+
+def
 
