@@ -103,7 +103,7 @@ def test_repeat_empty_string():
 
 def test_line_empty_decorated():
     """Line empty."""
-    assert calculator.line(0, decorated=False) == ""
+    assert calculator.line(1, decorated=True) == ""
 
 
 def test_line_not_decorated():
