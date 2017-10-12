@@ -58,16 +58,16 @@ def test_convert_name_addition_negative_b():
 
 
 def test_subtraction_positive_numbers_fail():
-    """test subtraction positive numbers."""
+    """Test subtraction positive numbers."""
     assert calculator.subtraction(4, 3) == '4 - 3 = 1'
 
 
 def test_subtraction_negative_numbers_fail():
-    """test subtraction negative numbers."""
+    """Test subtraction negative numbers."""
     assert calculator.subtraction(-4, -3) == '-4 - -3 = -7'
 
 
 def test_subtraction_negative_a():
-    """Test subtractoin when a is negative."""
+    """Test subtraction when a is negative."""
     assert calculator.subtraction(-5, 8) == '-5 - 8 = -13'
 
