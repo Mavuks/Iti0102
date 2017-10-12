@@ -44,7 +44,7 @@ def test_convert_name_addition_negative_numbers_fail():
 
 def addition_positive_numbers_fail():
     """Test addition poisitive numbers."""
-    assert calculator.addition(4, 3) =='4 + 3 = 7'
+    assert calculator.addition(4, 3) == '4 + 3 = 7'
 
 
 def addition_negative_a():
