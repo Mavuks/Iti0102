@@ -39,7 +39,7 @@ def test_convert_name_two_digits_str_len():
 
 def test_convert_name_addition_negative_numbers_fail():
     """Test addition negative numbers."""
-    assert calculator.addition(-3, -4) =='-3 + -4 = -7'
+    assert calculator.addition(-3, -4) == '-3 + -4 = -7'
 
 
 def addition_positive_numbers_fail():
