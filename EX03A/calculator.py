@@ -104,3 +104,4 @@ print(repeat("s", 0))
 print(line(2))
 print(line(4, decorated=True))
 print(line(6, decorated=True))
+
