@@ -33,8 +33,8 @@ def test_convert_name_error_with_len3():
 
 
 def test_convert_name_two_digits_str_len():
-    """Test name with lenght of 2."""
-    assert calculator.convert_name('22') == 'ERROR'
+    """Test name with lenght of 2 digits."""
+    assert calculator.convert_name('Maailmasoda') == 'MAA-11da'
 
 
 def test_convert_name_addition_negative_numbers_fail():
