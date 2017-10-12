@@ -56,4 +56,3 @@ def addition_negative_b():
     """test addition when b is negative."""
     assert calculator.addition(4, -3) == '4 + -3 = 1'
 
-
