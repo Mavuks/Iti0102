@@ -64,5 +64,5 @@ def test_calculator_subtraction_positive_numbers_fail():
 
 def test_calculator_subtraction_negative_numbers_fail():
     """test subtraction negative numbers."""
-    assert calculator.subtraction(-4, -3) == '(-4) - (-3) = -7'
+    assert calculator.subtraction(-4, -3) == '-4 - -3 = -7'
 
