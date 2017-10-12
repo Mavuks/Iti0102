@@ -94,11 +94,11 @@ def test_repeat_empty_string():
 
 def test_line_empty_decorated():
     """Line empty"""
-    assert calculator.line(0, decorated=True) == ''
+    assert calculator.line(0, decorated=False) == ''
 
 
 def test_line_not_decorated():
-    """Test not decorated"""
+    """Test not decorated."""
     assert calculator.line(3, decorated=False) == '---'
 
 
