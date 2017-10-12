@@ -71,3 +71,12 @@ def test_subtraction_negative_a():
     """Test subtraction when a is negative."""
     assert calculator.subtraction(-5, 10) == '-5 - 10 = -15'
 
+
+def test_subtraction_negative_b():
+    """Test subtraction when b is negative."""
+    assert calculator.subtraction(5, -10) == '5 - -10 = 15'
+
+
+def test_repeat_negative():
+    """Repeat negative."""
+    assert calculator.repeat("s", -1) == ''
