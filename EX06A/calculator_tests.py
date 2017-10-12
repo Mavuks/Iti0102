@@ -99,4 +99,9 @@ def test_line_empty_decorated():
 
 def test_line_not_decorated():
     """Test not decorated"""
-    assert calculator.line(2, decorated=False) == "--"
+    assert calculator.line(2, decorated=False) == '--'
+
+
+def test_line_decorated():
+    """Test decorated."""
+    assert calculator.line(6, decorated=True) == '>------<'
