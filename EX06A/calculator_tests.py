@@ -56,3 +56,13 @@ def test_convert_name_addition_negative_b():
     """test addition when b is negative."""
     assert calculator.addition(4, -3) == '4 + -3 = 1'
 
+
+def test_convert_name_subtraction_positive_numbers_fail():
+    """test subtraction positive numbers."""
+    assert calculator.subtraction(4, 3) == '4 - 3 = 1'
+
+
+def test_calculator_subtraction_negative_numbers_fail():
+    """test subtraction negative nubmers."""
+    assert calculator.subtraction(-4, -3) == '-4 - -3  = -7'
+
