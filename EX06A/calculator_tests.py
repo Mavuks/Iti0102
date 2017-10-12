@@ -38,9 +38,22 @@ def test_convert_name_two_digits_str_len():
 
 
 def test_convert_name_addition_negative_numbers_fail():
-    """Test addition negative numbers"""
+    """Test addition negative numbers."""
     assert calculator.addition(-3, -4) =='-3 + -4 = -7'
 
 
+def addition_positive_numbers_fail():
+    """Test addition poisitive numbers."""
+    assert calculator.addition(4, 3) =='4 + 3 = 7'
+
+
+def addition_negative_a():
+    """Test addition when a is negative."""
+    assert calculator.addition(-4, 3) == '-4 + 3 = -1'
+
+
+def addition_negative_b():
+    """test addition when b is negative."""
+    assert calculator.addition(4, -3) == '4 + (-3) = 1'
 
 
