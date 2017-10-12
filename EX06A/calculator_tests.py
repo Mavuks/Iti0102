@@ -11,7 +11,7 @@ def test_repeat_zero_length():
 
 
 def test_repeat_negative_length():
-    """fvdsf"""
+    """fvdsf."""
     # TODO: assert here something
     pass
 
@@ -102,7 +102,7 @@ def test_repeat_empty_string():
 
 
 def test_line_empty_decorated():
-    """Line empty"""
+    """Line empty."""
     assert calculator.line(0, decorated=False) == ''
 
 
@@ -117,7 +117,7 @@ def test_line_decorated():
 
 
 def test_line_decorated_small():
-    """Test line decorated small"""
+    """Test line decorated small."""
     assert calculator.line(3, decorated=True) == '>-<'
 
 
@@ -133,7 +133,7 @@ def test_display_wrong_width():
 
 def test_display_operation_other():
     """Test display operation other."""
-    assert calculator.display(3, 2, operation="multiply",  width=20) == 'ERROR'
+    assert calculator.display(3, 2, operation="multiply", width=20) == 'ERROR'
 
 
 def test_display_operation_addition():
