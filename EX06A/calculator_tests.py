@@ -118,12 +118,12 @@ def test_line_decorated():
 
 def test_line_decorated_small():
     """Test line decorated small."""
-    assert calculator.line(3, True) == '>-<'
+    assert calculator.line(1, True) == ''
 
 
 def test_line_not_decorated_small():
     """Test line not decorated small."""
-    assert calculator.line(3, False) == '---'
+    assert calculator.line(1, False) == '-'
 
 
 def test_display_wrong_width():
