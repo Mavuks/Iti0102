@@ -1,5 +1,6 @@
 import newton
 
+
 def test_give_it_a_better_name_pls_and_write_a_docstring_pls():
     """Test."""
     assert newton.square_root_with_newton_method(4, 1) == 2
@@ -26,16 +27,16 @@ def test_newton_rounding_1():
 
 
 def test_newton_fails_with_high_iterations():
-    """Fail with high iterations"""
+    """Fail with high iterations."""
     assert newton.square_root_with_newton_method(3, 123456) == 1.732
 
 
 def test_newton_fail_with_low_iterations():
-    """Fail with low iterations"""
+    """Fail with low iterations."""
     assert newton.square_root_with_newton_method(3, 0.0000009) == 1.5
 
 
-def test_newton_iterations_related_2():
+def test_newton_iteration_related_2():
     """Iterations related 2."""
     assert newton.square_root_with_newton_method(3, 0) == 1.5
 
@@ -77,9 +78,3 @@ def test_newton_number_related_1():
 def test_newton_limit_iterations():
     """Limit Iterations."""
     assert newton.square_root_with_newton_method(1500, 10000000) == 38.73
-
-
-
-
-
-
