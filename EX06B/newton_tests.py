@@ -65,6 +65,6 @@ def test_newton_number_related_1():
     assert newton.square_root_with_newton_method(0.9, 0.1) == 0.45
 
 
-def test_newton_number_related_2():
+def test_newton_number_related():
     """Nr2"""
     assert newton.square_root_with_newton_method(1.1, 0.01) == 0.55
