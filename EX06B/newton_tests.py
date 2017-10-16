@@ -43,3 +43,8 @@ def test_newton_iterations_related_2():
 def  test_newton_fails_with_high_numbers():
     """Test fails with high numbers."""
     assert newton.square_root_with_newton_method(123456, 4) == 3868.619
+
+
+def test_newton_number_and_iterations_related_1():
+    """Number and iterations related 1."""
+    assert newton.square_root_with_newton_method(1, 1) == 1.25
