@@ -76,7 +76,7 @@ def test_newton_number_related_2():
 
 def test_newton_number_related_1():
     """Nr1."""
-    assert None in newton.square_root_with_newton_method(-1, 0.1)
+    assert newton.square_root_with_newton_method(-1, 0.1) == None
 
 
 def test_newton_limit_iterations():
