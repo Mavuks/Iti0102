@@ -12,4 +12,4 @@ def test_newton_form_zero():
 
 def test_newton_iterations_zero():
     """Number zero."""
-    assert newton.square_root_with_newton_method(4, 0) == None
+    assert newton.square_root_with_newton_method(4, -1) == None
