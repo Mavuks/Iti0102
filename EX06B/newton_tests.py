@@ -16,7 +16,7 @@ def test_newton_form_zero():
 
 
 def test_newton_iteration_zero():
-    """iterations zero."""
+    """iteration zero."""
     assert newton.square_root_with_newton_method(4, -1) == None
 
 
@@ -45,7 +45,7 @@ def test_newton_iteration_related_2():
     assert newton.square_root_with_newton_method(3, 0) == 1.5
 
 
-def  test_newton_fails_with_high_numbers():
+def test_newton_fails_with_high_numbers():
     """Test fails with high numbers."""
     assert newton.square_root_with_newton_method(123456, 4) == 3868.619
 
@@ -67,7 +67,8 @@ def test_newton_related():
 
 def test_newton_related_1():
     """test."""
-    assert newton.square_root_with_newton_method(0.000005,  2009999) == 0.002
+    assert newton.square_root_with_newton_method(0.000005, 2009999) == 0.002
+
 
 def test_newton_number_related_2():
     """Number related 2."""
