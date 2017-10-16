@@ -52,9 +52,19 @@ def test_newton_with_small_numbers():
 
 def test_newton_number_and_iterations_related_1():
     """Number and iterations related 1."""
-    assert newton.square_root_with_newton_method(1.00, 1.9) == 1.25
+    assert newton.square_root_with_newton_method(0.99, 0.9) == 1.25
 
 
 def test_newton_number_related_2():
     """Number related 2."""
-    assert newton.square_root_with_newton_method(2.1, 2.4) == 1.451
+    assert newton.square_root_with_newton_method(2.1, 2.4) == 1.4514
+
+
+def test_nr_1():
+    """Nr1."""
+    assert newton.square_root_with_newton_method(0.9, 0.1) == 0.45
+
+
+def test_nr_1():
+    """Nr2"""
+    assert newton.square_root_with_newton_method(1.1, 0.01) == 0.55
