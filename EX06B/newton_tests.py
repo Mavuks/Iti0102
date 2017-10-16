@@ -11,5 +11,10 @@ def test_newton_form_zero():
 
 
 def test_newton_iterations_zero():
-    """Number zero."""
+    """iterations zero."""
     assert newton.square_root_with_newton_method(4, -1) == None
+
+
+def test_newton_rounding_2():
+    """rounding."""
+    assert newton.square_root_with_newton_method(4.45, 2) == 2.11

@@ -103,5 +103,5 @@ print(subtraction(200, 45))
 print(repeat("s", 0))
 print(line(2))
 print(line(1, decorated=True))
-print(line(6, decorated=True))
+print(line(1, decorated=False))
 
