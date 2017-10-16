@@ -67,9 +67,7 @@ def test_newton_number_related_1():
 
 def test_newton_limit_iterations():
     """Limit Iterations."""
-    assert newton.square_root_with_newton_method(15, 90000000) == 3.873
+    assert newton.square_root_with_newton_method(15, 9000000) == 3.873
 
 
-def test_newton_number_and_iterations_related():
-    """number and iterations."""
-    assert newton.square_root_with_newton_method(2.15, 0.0005) == 1.075
+
