@@ -1,4 +1,8 @@
+"""Newton Test."""
+
+
 import newton
+
 
 
 def test_give_it_a_better_name_pls_and_write_a_docstring_pls():
@@ -11,7 +15,7 @@ def test_newton_form_zero():
     assert newton.square_root_with_newton_method(0, 1) == None
 
 
-def test_newton_iterations_zero():
+def test_newton_iteration_zero():
     """iterations zero."""
     assert newton.square_root_with_newton_method(4, -1) == None
 
@@ -37,7 +41,7 @@ def test_newton_fail_with_low_iterations():
 
 
 def test_newton_iteration_related_2():
-    """Iterations related 2."""
+    """Iteration related 2."""
     assert newton.square_root_with_newton_method(3, 0) == 1.5
 
 
