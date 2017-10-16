@@ -55,6 +55,15 @@ def test_newton_number_and_iterations_related_1():
     assert newton.square_root_with_newton_method(0.9233, 1.9) == 1.231
 
 
+def test_newton_related():
+    """Test related."""
+    assert newton.square_root_with_newton_method(1.099, 0.998) == 0.549
+
+
+def test_newton_related_1():
+    """test."""
+    assert newton.square_root_with_newton_method(1.99,  2.009) == 1.413
+
 def test_newton_number_related_2():
     """Number related 2."""
     assert newton.square_root_with_newton_method(2.1, 2.4) == 1.451
