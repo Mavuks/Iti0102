@@ -62,7 +62,7 @@ def test_newton_related():
 
 def test_newton_related_1():
     """test."""
-    assert newton.square_root_with_newton_method(1.99,  2.009) == 1.413
+    assert newton.square_root_with_newton_method(0.000005,  2009999) == 0.002
 
 def test_newton_number_related_2():
     """Number related 2."""
