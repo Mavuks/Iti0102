@@ -23,3 +23,13 @@ def test_newton_rounding_2():
 def test_newton_rounding_1():
     """Rounding."""
     assert newton.square_root_with_newton_method(6.5, 2) == 2.551
+
+
+def test_newton_fails_with_high_iterations():
+    """Fails with high iterations"""
+    assert newton.square_root_with_newton_method(3, 123456) == 1.732
+
+
+def test_newton_fail_with_low_iterations():
+    """Fails with low iterations"""
+    assert newton.square_root_with_newton_method(3, 0.0000009) == 1.5
