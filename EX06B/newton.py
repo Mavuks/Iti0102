@@ -24,4 +24,4 @@ def square_root_with_newton_method(number, iterations):
 
 
 if __name__ == '__main__':
-    print(square_root_with_newton_method(1.1, 1.1))
+    print(square_root_with_newton_method(16, 16.4))
