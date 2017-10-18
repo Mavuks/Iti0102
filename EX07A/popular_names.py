@@ -23,8 +23,8 @@ def to_dictionary(names: list) -> dict:
     :return: dictionary {"name:sex": number}
     """
 
-    dic = dict(names)
-    return dic
+    nimed = dict(names)
+    return nimed
 
 def to_sex_dicts(names_dict: dict) -> tuple:
     """
@@ -56,7 +56,7 @@ def number_of_people(names_dict: dict) -> int:
     :return: int
     """
     pass
-    return int(names.count("F","M"))
+    return int(len(nimed))
 
 
 def names_by_popularity(names_dict: dict) -> str:
