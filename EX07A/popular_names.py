@@ -23,7 +23,9 @@ def to_dictionary(names: list) -> dict:
     :return: dictionary {"name:sex": number}
     """
 
-    nimed = dict(names)
+    nimed = {}
+    for i in range(len(names)):
+        nimed[names[i]] = names.count(names[i])
     return nimed
 
 def to_sex_dicts(names_dict: dict) -> tuple:
