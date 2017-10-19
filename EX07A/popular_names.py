@@ -45,6 +45,16 @@ def to_sex_dicts(names_dict: dict) -> tuple:
     first one is male names, seconds is female names.
     """
     pass
+    male_names = {}
+    female_names = {}
+    for names in names_dict:
+        if names_dict[-1].endswith("M"):
+            male_names.update({str(names): names_dict.count(names)})
+        else:
+            female_names.update({str(names): names_dict.count(names)})
+
+    return male_names
+    return female_names
 
 
 def most_popular(names_dict: dict) -> str:
@@ -56,7 +66,7 @@ def most_popular(names_dict: dict) -> str:
     :return: string
     """
     pass
-    return {p_id: id_list.count(p_id) for p_id in set(id_list)} if id_list else {}
+    return
 
 def number_of_people(names_dict: dict) -> int:
     """
@@ -91,7 +101,7 @@ def names_by_popularity(names_dict: dict) -> str:
 
 
 
-"""
+
 if __name__ == '__main__':
     example_names = ("Kati:F\n" * 1000 + "Mati:M\n" * 800 + "Mari:F\n" * 600 + "Tõnu:M\n" * 400).rstrip("\n").split("\n")
     people = to_dictionary(example_names)
@@ -104,4 +114,3 @@ if __name__ == '__main__':
     print(names_by_popularity(male_names))  # ->   1. Mati: 800
 #                                                  2. Tõnu: 400
 #                                                  (empty line)
-"""
