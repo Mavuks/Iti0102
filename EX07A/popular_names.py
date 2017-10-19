@@ -24,10 +24,16 @@ def to_dictionary(names: list) -> dict:
     """
 
     names_dict = {}
-
-    for i in range(len(names)):
-        names_dict[names[i]] = names.count(names[i])
+    for name in names:
+        if any(name in s for s in names_dict):
+            continue
+        else:
+            names_dict.update({str(name): names.count(name)})
     return names_dict
+
+    #for i in range(len(names)):
+    #    names_dict[names[i]] = names.count(names[i])
+    #return names_dict
 
 
 def to_sex_dicts(names_dict: dict) -> tuple:
