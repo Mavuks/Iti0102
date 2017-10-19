@@ -50,7 +50,7 @@ def most_popular(names_dict: dict) -> str:
     :return: string
     """
     pass
-
+    return {p_id: id_list.count(p_id) for p_id in set(id_list)} if id_list else {}
 
 def number_of_people(names_dict: dict) -> int:
     """
