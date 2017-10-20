@@ -48,10 +48,10 @@ def to_sex_dicts(names_dict: dict) -> tuple:
     male_names = {}
     female_names = {}
     for names in names_dict:
-        if names_dict[-1].endswith("M"):
-            male_names.update({str(names): names_dict.count(names)})
+        if (names_dict.__contains__("M")):
+            male_names.update(names_dict)
         else:
-            female_names.update({str(names): names_dict.count(names)})
+            female_names.update(names_dict)
 
     return male_names
     return female_names
