@@ -76,7 +76,7 @@ def number_of_people(names_dict: dict) -> int:
     :return: int
     """
     pass
-    return int(len(nimed))
+    return int(len(names_dict))
 
 
 def names_by_popularity(names_dict: dict) -> str:
