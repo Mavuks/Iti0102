@@ -64,8 +64,8 @@ def most_popular(names_dict: dict) -> str:
     :param names_dict: dictionary of names (key is name, value is count)
     :return: string
     """
-    if len(names_dict) == 0:
-        return "Empty dictionary"
+    if not bool(names_dict):
+        return "Empty dictionary."
     else:
         return max(names_dict.keys(), key=(lambda k: names_dict[k]))
 
