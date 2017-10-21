@@ -1,4 +1,5 @@
 """Order names by popularity."""
+from collections import Counter
 
 
 def read_from_file() -> list:
@@ -67,7 +68,7 @@ def most_popular(names_dict: dict) -> str:
     :return: string
     """
     pass
-    return
+    return sum((Counter(x) for x in dic.values()),Counter()).most_common()
 
 def number_of_people(names_dict: dict) -> int:
     """
