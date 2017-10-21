@@ -67,8 +67,10 @@ def most_popular(names_dict: dict) -> str:
     :param names_dict: dictionary of names (key is name, value is count)
     :return: string
     """
-    pass
-    return sum((Counter(x) for x in dic.values()),Counter()).most_common()
+    c = Counter()
+    for d in names_dict.values():
+        c += Counter(d)
+    return c.most_common()
 
 def number_of_people(names_dict: dict) -> int:
     """
