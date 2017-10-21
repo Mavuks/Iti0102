@@ -1,5 +1,5 @@
 """Order names by popularity."""
-from collections import Counter
+import operator
 
 def read_from_file() -> list:
     """
@@ -67,8 +67,7 @@ def most_popular(names_dict: dict) -> str:
     if len(names_dict) == 0:
         return "Empty dictionary"
     else:
-        for key in names_dict:
-            return key, names_dict[key]
+        return max(names_dict.keys(), key=(lambda k: names_dict[k]))
 
 
 
