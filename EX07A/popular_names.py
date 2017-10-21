@@ -22,7 +22,6 @@ def to_dictionary(names: list) -> dict:
     :param names: list of all the names
     :return: dictionary {"name:sex": number}
     """
-
     names_dict = {}
     for name in names:
         if any(name in s for s in names_dict):
@@ -44,14 +43,13 @@ def to_sex_dicts(names_dict: dict) -> tuple:
     :return: two dictionaries {"name": number}, {"name": number}
     first one is male names, seconds is female names.
     """
-    pass
     male_names = {}
     female_names = {}
     for name, count in names_dict.items():
         if any(':M' in s for s in names_dict):
-            male_names.update({str(name[:-2]): count})
+            male_names.update({str(name[:-1]): count})
         elif any(':F' in s for s in names_dict):
-            female_names.update({str(name[:-2]): count})
+            female_names.update({str(name[:-1]): count})
 
     return male_names, female_names
 
@@ -66,7 +64,7 @@ def most_popular(names_dict: dict) -> str:
     :param names_dict: dictionary of names (key is name, value is count)
     :return: string
     """
-    if not bool(names_dict):
+    if len(names_dict) == 0:
         return "Empty dictionary"
     else:
         for key in names_dict:
