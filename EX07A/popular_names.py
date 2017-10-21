@@ -47,14 +47,14 @@ def to_sex_dicts(names_dict: dict) -> tuple:
     pass
     male_names = {}
     female_names = {}
-    for names in names_dict:
-        if (names_dict.__contains__("M")):
-            male_names.update(names_dict)
-        else:
-            female_names.update(names_dict)
-
+    for name, count in names_dict.items():
+        if any(':M' in s for s in names_dict):
+            male_names.update({str(name[:-2]): count})
+        elif any(':F' in s for s in names_dict):
+            female_names.update({str(name[:-2]): count})
     return male_names
     return female_names
+
 
 
 def most_popular(names_dict: dict) -> str:
