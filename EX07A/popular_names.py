@@ -46,9 +46,9 @@ def to_sex_dicts(names_dict: dict) -> tuple:
     male_names = {}
     female_names = {}
     for name, count in names_dict.items():
-        if name[-2:] == 'M':
+        if name[-2:] == ':M':
             male_names[name[:-2]] = count
-        elif name[-2:] == 'F':
+        elif name[-2:] == ':F':
             female_names[name[:-2]] = count
 
     return male_names, female_names
