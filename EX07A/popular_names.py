@@ -69,7 +69,8 @@ def most_popular(names_dict: dict) -> str:
     if not bool(names_dict):
         return "Empty dictionary"
     else:
-        return Counter(names_dict).most_common(2)
+        for key in names_dict:
+            return key, names_dict[key]
 
 
 
