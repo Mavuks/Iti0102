@@ -52,8 +52,9 @@ def to_sex_dicts(names_dict: dict) -> tuple:
             male_names.update({str(name[:-2]): count})
         elif any(':F' in s for s in names_dict):
             female_names.update({str(name[:-2]): count})
-    return male_names
-    return female_names
+
+    return male_names, female_names
+
 
 
 
@@ -76,7 +77,7 @@ def number_of_people(names_dict: dict) -> int:
     :return: int
     """
     pass
-    return int(len(names_dict))
+    return int(sum(names_dict.values())
 
 
 def names_by_popularity(names_dict: dict) -> str:
