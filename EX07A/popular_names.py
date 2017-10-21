@@ -66,7 +66,10 @@ def most_popular(names_dict: dict) -> str:
     :param names_dict: dictionary of names (key is name, value is count)
     :return: string
     """
-    return Counter(names_dict).most_common(2)
+    if not names_dict:
+        return "Empty dictionary"
+    else:
+        return Counter(names_dict).most_common(2)
 
 
 
