@@ -24,8 +24,6 @@ def to_dictionary(names: list) -> dict:
     :return: dictionary {"name:sex": number}
     """
     names_dict = {}
-    for i in names:
-        names_dict[i] = 0
     count = names_dict
     for i in names:
         count[i] = count.get(i, 0) + 1
