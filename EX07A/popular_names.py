@@ -1,5 +1,5 @@
 """Order names by popularity."""
-import operator
+from collections import OrderedDict
 
 def read_from_file() -> list:
     """
@@ -100,9 +100,13 @@ def names_by_popularity(names_dict: dict) -> str:
     :param names_dict: dictionary of the names (key is name, value is count)
     :return: string
     """
-    pass
-
-
+    popularity = OrderedDict(sorted(names_dict.items(), key=lambda t: t[1],reverse=True))
+    result = str()
+    index = 1
+    for key, value in popularity.items():
+        result += f"{index}. {key}: {value}\n"
+        index +=1
+    return result
 
 
 
