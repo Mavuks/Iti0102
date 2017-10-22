@@ -8,8 +8,11 @@ def read_from_file() -> list:
 
     :return: list
     """
-    names_dict = dict([(i, names.count(i)) for i in set(names)])
-
+    names = []
+    with open("popular_names.txt", encoding='utf-8') as file:
+        for line in file:
+            names.append(line.strip())
+    return names
 
 
 def to_dictionary(names: list) -> dict:
@@ -20,12 +23,8 @@ def to_dictionary(names: list) -> dict:
     :param names: list of all the names
     :return: dictionary {"name:sex": number}
     """
-    names_dict = {}
-    for name in names:
-        if any(name in s for s in names_dict):
-            continue
-        else:
-            names_dict.update({str(name): names.count(name)})
+    names_dict = dict( [ (i, names.count(i)) for i in set(names) ] )
+
     return names_dict
 
 
