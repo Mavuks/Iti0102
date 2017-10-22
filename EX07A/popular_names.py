@@ -25,7 +25,6 @@ def to_dictionary(names: list) -> dict:
     """
     names_dict = dict( [ (i, names.count(i)) for i in set(names) ] )
 
-    return names_dict
 
 
 def to_sex_dicts(names_dict: dict) -> tuple:
