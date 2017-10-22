@@ -23,7 +23,13 @@ def to_dictionary(names: list) -> dict:
     :param names: list of all the names
     :return: dictionary {"name:sex": number}
     """
-    names_dict = dict( [ (i, names.count(i)) for i in set(names) ] )
+    names_dict = {}
+    for i in names:
+        names_dict[i] = 0
+    count = names_dict
+    for i in names:
+        count[i] = count.get(i, 0) + 1
+    return names_dict
 
 
 
