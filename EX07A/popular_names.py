@@ -8,11 +8,8 @@ def read_from_file() -> list:
 
     :return: list
     """
-    names = []
-    with open("popular_names.txt", encoding='utf-8') as file:
-        for line in file:
-            names.append(line.strip())
-    return names
+    names_dict = dict([(i, names.count(i)) for i in set(names)])
+
 
 
 def to_dictionary(names: list) -> dict:
