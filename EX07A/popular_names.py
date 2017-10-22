@@ -1,6 +1,7 @@
 """Order names by popularity."""
 from collections import OrderedDict
 
+
 def read_from_file() -> list:
     """
     Create the list of all the names.
@@ -30,10 +31,6 @@ def to_dictionary(names: list) -> dict:
             names_dict.update({str(name): names.count(name)})
     return names_dict
 
-    #for i in range(len(names)):
-    #    names_dict[names[i]] = names.count(names[i])
-    #return names_dict
-
 
 def to_sex_dicts(names_dict: dict) -> tuple:
     """
@@ -54,8 +51,6 @@ def to_sex_dicts(names_dict: dict) -> tuple:
     return male_names, female_names
 
 
-
-
 def most_popular(names_dict: dict) -> str:
     """
     Find the most popular name in the dictionary.
@@ -68,8 +63,6 @@ def most_popular(names_dict: dict) -> str:
         return "Empty dictionary."
     else:
         return max(names_dict.keys(), key=(lambda k: names_dict[k]))
-
-
 
 
 def number_of_people(names_dict: dict) -> int:
@@ -107,7 +100,6 @@ def names_by_popularity(names_dict: dict) -> str:
         result += f"{index}. {key}: {value}\n"
         index +=1
     return result
-
 
 
 if __name__ == '__main__':
