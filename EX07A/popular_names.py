@@ -30,7 +30,6 @@ def to_dictionary(names: list) -> dict:
     return names_dict
 
 
-
 def to_sex_dicts(names_dict: dict) -> tuple:
     """
     Divide the names by sex to 2 different dictionaries.
