@@ -32,7 +32,7 @@ def check_message_length(words: list) -> bool:
     :return: bool
     """
 
-    if len(words.split()) < 50:
+    if len(words) < 50:
         return False
     else:
         return True
