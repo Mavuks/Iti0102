@@ -32,9 +32,22 @@ def check_message_length(words: list) -> bool:
     :return: bool
     """
 
-    text_length = len(words.split()) > 50
-    if text_length is True:
-        return "Sorry, the input's just too long!"
+    if len(words.split()) < 50:
+        return False
+    else:
+        return True
+
+    # text_length = len(words.split()) > 50 == 'True'
+    # print bool(text_length)
+    #
+    # if (bool(text_length) in True):
+    #     return "Sorry, the input's just too long!"
+
+
+
+    # text_length = len(words.split()) > 50
+    # if text_length is True:
+    #     return "Sorry, the input's just too long!"
 
 
 
