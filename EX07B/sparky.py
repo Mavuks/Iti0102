@@ -1,6 +1,5 @@
 """Simulation."""
 
-
 def simulate(wmap: list, moves: list) -> list:
     """
     Simulate a robotic lawn mower.
@@ -20,15 +19,15 @@ def simulate(wmap: list, moves: list) -> list:
     Grass under Sparky's starting position is always cut grass ('-').
     If Sparky mows high grass, it first turns into low grass ('w') and then from low grass into cut grass ('-').
     """
-    x, y = coordinates(wmap)
-    wmap, x, y = moveset(wmap, moves, x, y)
+    x, y = beginning_coord(wmap)
+    wmap, x, y = Moving(wmap, moves, x, y)
     wmap[y] = wmap[y][:x] + 'X' + wmap[y][1 + x:]
 
     return wmap
 
 
 def change_letters(letter: str):
-    """Change letters if possible."""
+    """Changeing letter if possible."""
     if letter == "W":
         return "w"
     elif letter == "w":
@@ -36,7 +35,7 @@ def change_letters(letter: str):
     return letter
 
 
-def coordinates(wmap: list):
+def beginning_coord(wmap: list):
     """Getting beginning coordinates."""
     x = 0
     y = 0
@@ -47,8 +46,8 @@ def coordinates(wmap: list):
     return x, y
 
 
-def moveset(wmap: list, moves: list, x, y):
-    """WAS sth."""
+def Moving(wmap: list, moves: list, x, y):
+    """Moving."""
     grass = '-'
     for move in moves:
         wmap[y] = wmap[y][:x] + grass+ wmap[y][1 + x:]
@@ -64,6 +63,9 @@ def moveset(wmap: list, moves: list, x, y):
             if x == len(wmap[0]) - 1 or wmap[y][x + 1] == '#':
                 continue
             x = x + 1
+        elif move == 'W':
+            if x == 0 or wmap[y][x - 1] == '#':
+                continue
             x = x - 1
         grass = change_letters(wmap[y][x])
 
