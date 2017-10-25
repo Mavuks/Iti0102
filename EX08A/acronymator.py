@@ -20,7 +20,7 @@ def check_word(word: str) -> bool:
     :param word: word
     :return: bool
     """
-    check_word("a-bc") -> True
+    # check_word("a-bc") -> True
 
 
 
