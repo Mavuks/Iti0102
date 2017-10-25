@@ -1,5 +1,6 @@
 """Simulation."""
 
+
 def simulate(wmap: list, moves: list) -> list:
     """
     Simulate a robotic lawn mower.
@@ -50,7 +51,7 @@ def Moving(wmap: list, moves: list, x, y):
     """Moving."""
     grass = '-'
     for move in moves:
-        wmap[y] = wmap[y][:x] + grass+ wmap[y][1 + x:]
+        wmap[y] = wmap[y][:x] + grass + wmap[y][1 + x:]
         if move == 'N':
             if y == 0 or wmap[y - 1][x] == '#':
                 continue
@@ -70,9 +71,6 @@ def Moving(wmap: list, moves: list, x, y):
         grass = change_letters(wmap[y][x])
 
     return wmap, x, y
-
-
-
 
 
 if __name__ == '__main__':
