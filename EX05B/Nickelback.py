@@ -7,7 +7,7 @@ import locale
 import turtle
 t = turtle
 t.speed(100)
-data_list = [100, 50, 150, 300, 200, 100, 50, 150, 300, 200.9, 200, 100]
+data_list = [100, 50, 150, 300, 200, 100, 50, 150, 300, 200.9, 200]
 
 
 def get_month_name(month_no):
@@ -26,7 +26,7 @@ def draw_graph(pencil: turtle.Turtle, posx, posy, data_list):
     data_list -- the data shown on the graph as a list of numeric values
     """
     # Your code here
-    data_list = [100, 50, 150, 300, 200, 100, 50, 150, 300, 200.9, 200, 100]
+    data_list = [100, 50, 150, 300, 200, 100, 50, 150, 300, 200.9, 200]
     turtle.setup(1500, 800)
     t.penup()
     t.goto(posx, posy)
