@@ -64,7 +64,6 @@ def moveset(wmap: list, moves: list, x, y):
             if x == len(wmap[0]) - 1 or wmap[y][x + 1] == '#':
                 continue
             x = x + 1
-
             x = x - 1
         grass = change_letters(wmap[y][x])
 
