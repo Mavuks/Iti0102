@@ -1,5 +1,7 @@
-
 """Turn a phrase into acronym."""
+
+import re
+
 
 
 def acronymize(message: str) -> str:
@@ -32,19 +34,9 @@ def check_message_length(words: list) -> bool:
     :return: bool
     """
 
-    return len(words) >= 50
-
-    # text_length = len(words.split()) > 50 == 'True'
-    # print bool(text_length)
-    #
-    # if (bool(text_length) in True):
-    #     return "Sorry, the input's just too long!"
+    return len(words) > 51
 
 
-
-    # text_length = len(words.split()) > 50
-    # if text_length is True:
-    #     return "Sorry, the input's just too long!"
 
 
 
