@@ -12,15 +12,16 @@ def acronymize(message: str) -> str:
     """
     word_list = message.split()
 
+    if check_word(message) is None:
+        return ""
+
+
     if check_message_length(message) is True:
         return "Sorry, the input's just too long!"
 
-
-
-    for word in word_list:
-        if check_word(word):
-            nom = word[0].upper()
-    return reverse(nom)
+    checked_words = [word for word in word_list if check_word(word)]
+    acronym = "".join([word[0].upper() for word in checked_words])
+    return reverse(acronym)
 
 
 
