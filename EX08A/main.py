@@ -12,7 +12,7 @@ def get_reversed_acronym(message: str) -> str:
     :param message: initial text
     :return: reversed acronym of the given message
     """
-    pass
+    return acronymator.acronymize(message)
 
 if __name__ == '__main__':
 

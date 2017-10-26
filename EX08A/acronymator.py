@@ -11,7 +11,8 @@ def acronymize(message: str) -> str:
     :param message: initial text
     :return: reversed acronym
     """
-
+    if check_message_length(message) is True:
+        return "Sorry, the input's just too long!"
 
 
 def check_word(word: str) -> bool:
@@ -22,7 +23,13 @@ def check_word(word: str) -> bool:
     :param word: word
     :return: bool
     """
-    # check_word("a-bc") -> True
+    checked_word = re.match("([^()1234567890!?_@#$%^&*.,']+)[()1234567890!?_@#$%^&*.,']*", word)
+
+    if checked_word is True:
+        return False
+
+
+    return checked_word.group(0) == word and len(checked_word.group(1)) > 3
 
 
 
@@ -34,7 +41,7 @@ def check_message_length(words: list) -> bool:
     :return: bool
     """
 
-    return len(words) > 51
+    return len(words.split()) > 50
 
 
 
@@ -56,7 +63,7 @@ def reverse(message: str) -> str:
 
 if __name__ == '__main__':
 
-
+    print(check_word("Hello"))
     print(reverse("Tere"))
     print(check_message_length("""
     As soon as the light in the bedroom went out there was a stirring and a
