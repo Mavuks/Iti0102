@@ -26,6 +26,7 @@ def acronymize(message: str) -> str:
 
 
 
+
 def check_word(word: str) -> bool:
     """
     Check if the word is long enough and does not contain special symbols.
