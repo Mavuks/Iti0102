@@ -3,7 +3,6 @@
 import re
 
 
-
 def acronymize(message: str) -> str:
     """
     Turn the input text into the acronym and reverse it, if the text is not too long.
@@ -11,8 +10,19 @@ def acronymize(message: str) -> str:
     :param message: initial text
     :return: reversed acronym
     """
+    word_list = message.split()
+
     if check_message_length(message) is True:
         return "Sorry, the input's just too long!"
+
+
+
+    for word in word_list:
+        if check_word(word):
+            nom = word[0].upper()
+    return reverse(nom)
+
+
 
 
 def check_word(word: str) -> bool:
@@ -32,7 +42,6 @@ def check_word(word: str) -> bool:
     return checked_word.group(0) == word and len(checked_word.group(1)) > 3
 
 
-
 def check_message_length(words: list) -> bool:
     """
     Check if the initial text length is OK (does not contain more than 50 words).
@@ -44,11 +53,6 @@ def check_message_length(words: list) -> bool:
     return len(words.split()) > 50
 
 
-
-
-
-
-
 def reverse(message: str) -> str:
     """
     Reverse the given message.
@@ -57,8 +61,6 @@ def reverse(message: str) -> str:
     :return: reversed message
     """
     return message[::-1]
-
-
 
 
 if __name__ == '__main__':
