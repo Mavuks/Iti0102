@@ -23,6 +23,7 @@ if __name__ == '__main__':
     print(get_reversed_acronym("Light amplification by the stimulated emission of radiation."))  # --> RESAL
     print(get_reversed_acronym("Self-contained underwater breathing apparatus."))  # --> ABUS
     print(get_reversed_acronym("   Spaces     are    irrelevant   "))  # --> IS
+
     mes = \
     """
     As soon as the light in the bedroom went out there was a stirring and a
