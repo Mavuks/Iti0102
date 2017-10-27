@@ -23,8 +23,6 @@ if __name__ == '__main__':
     print(get_reversed_acronym("Light amplification by the stimulated emission of radiation."))  # --> RESAL
     print(get_reversed_acronym("Self-contained underwater breathing apparatus."))  # --> ABUS
     print(get_reversed_acronym("   Spaces     are    irrelevant   "))  # --> IS
-
-
     mes = \
     """
     As soon as the light in the bedroom went out there was a stirring and a
@@ -34,5 +32,4 @@ if __name__ == '__main__':
     It had been agreed that they should all meet in the big barn as soon as
     Mr. Jones was safely out of the way.
     """
-
     print(get_reversed_acronym(mes))  # --> Sorry, the input's just too long!

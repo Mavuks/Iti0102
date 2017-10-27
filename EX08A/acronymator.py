@@ -29,7 +29,7 @@ def check_word(word: str) -> bool:
     :param word: word
     :return: bool
     """
-    checked_word = re.match("([^()1234567890!?_@#$%^&*.,']+)[()1234567890!?_@#$%^&*.,']*",  word)
+    checked_word = re.match("([^()1234567890!?_@#$%^&*.,']+)[()1234567890!?_@#$%^&*.,']*", word)
 
     if checked_word is None:
         return False
