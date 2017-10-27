@@ -53,8 +53,9 @@ def check_message_length(words: list) -> bool:
     :param words: list of words
     :return: bool
     """
+    length = words.split()
 
-    return len(words.split()) > 50
+    return len(length) > 51
 
 
 def reverse(message: str) -> str:
