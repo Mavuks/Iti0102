@@ -16,7 +16,7 @@ def acronymize(message: str) -> str:
         return ''
 
 
-    if check_message_length(word_list) is True:
+    if check_message_length(word_list) is False:
         return "Sorry, the input's just too long!"
 
 
@@ -55,7 +55,10 @@ def check_message_length(words: list) -> bool:
     """
 
 
-    return len(words) > 51
+    if len(words) > 50:
+        return False
+    else:
+        return True
 
 
 def reverse(message: str) -> str:
