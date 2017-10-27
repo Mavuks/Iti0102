@@ -4,7 +4,6 @@
 import acronymator
 
 
-
 def get_reversed_acronym(message: str) -> str:
     """
     The main method of the program.
@@ -13,6 +12,7 @@ def get_reversed_acronym(message: str) -> str:
     :return: reversed acronym of the given message
     """
     return acronymator.acronymize(message)
+
 
 if __name__ == '__main__':
 

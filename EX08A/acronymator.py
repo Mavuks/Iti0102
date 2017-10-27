@@ -14,19 +14,11 @@ def acronymize(message: str) -> str:
 
     if check_word(message) is None:
         return ''
-
-
     if check_message_length(word_list) is False:
         return "Sorry, the input's just too long!"
-
-
-
     checked_words = [word for word in word_list if check_word(word)]
     acronym = "".join([word[0].upper() for word in checked_words])
     return reverse(acronym)
-
-
-
 
 
 def check_word(word: str) -> bool:
@@ -41,8 +33,6 @@ def check_word(word: str) -> bool:
 
     if checked_word is None:
         return False
-
-
     return checked_word.group(0) == word and len(checked_word.group(1)) > 3
 
 
@@ -53,8 +43,6 @@ def check_message_length(words: list) -> bool:
     :param words: list of words
     :return: bool
     """
-
-
     if len(words) > 50:
         return False
     else:
@@ -69,17 +57,3 @@ def reverse(message: str) -> str:
     :return: reversed message
     """
     return message[::-1]
-
-
-if __name__ == '__main__':
-
-    print(check_word("Hello"))
-    print(reverse("Tere"))
-    print(check_message_length("""
-    As soon as the light in the bedroom went out there was a stirring and a
-    fluttering all through the farm buildings. Word had gone round during the
-    day that old Major, the prize Middle White boar, had had a strange dream
-    on the previous night and wished to communicate it to the other animals.
-    It had been agreed that they should all meet in the big barn as soon as
-    Mr. Jones was safely out of the way."""))
-
