@@ -53,9 +53,9 @@ def check_message_length(words: list) -> bool:
     :param words: list of words
     :return: bool
     """
-    length = list(words)
 
-    return len(length) > 51
+
+    return len(words) > 51
 
 
 def reverse(message: str) -> str:
@@ -79,3 +79,4 @@ if __name__ == '__main__':
     on the previous night and wished to communicate it to the other animals.
     It had been agreed that they should all meet in the big barn as soon as
     Mr. Jones was safely out of the way."""))
+
