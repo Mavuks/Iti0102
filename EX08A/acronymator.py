@@ -16,7 +16,7 @@ def acronymize(message: str) -> str:
         return ''
 
 
-    if check_message_length(message) is True:
+    if check_message_length(word_list) is True:
         return "Sorry, the input's just too long!"
 
 
@@ -53,7 +53,7 @@ def check_message_length(words: list) -> bool:
     :param words: list of words
     :return: bool
     """
-    length = words.split()
+    length = list(words)
 
     return len(length) > 51
 
