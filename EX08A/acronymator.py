@@ -13,11 +13,13 @@ def acronymize(message: str) -> str:
     word_list = message.split()
 
     if check_word(message) is None:
-        return ""
+        return ''
 
 
     if check_message_length(message) is True:
         return "Sorry, the input's just too long!"
+
+
 
     checked_words = [word for word in word_list if check_word(word)]
     acronym = "".join([word[0].upper() for word in checked_words])
@@ -35,9 +37,9 @@ def check_word(word: str) -> bool:
     :param word: word
     :return: bool
     """
-    checked_word = re.match("([^()1234567890!?_@#$%^&*.,']+)[()1234567890!?_@#$%^&*.,']*", word)
+    checked_word = re.match("([^()1234567890!?_@#$%^&*.,']+)[()1234567890!?_@#$%^&*.,']*",  word)
 
-    if checked_word is True:
+    if checked_word is None:
         return False
 
 
