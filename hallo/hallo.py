@@ -1,5 +1,7 @@
 def first(m):
 
-    return n *n
+
 
 def last(n):
+
+    return n*n
