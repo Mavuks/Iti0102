@@ -1,7 +1,6 @@
 """Generate list of princesses."""
 
-import base64
-
+from base64 import b64decode
 
 
 def read(read_file) -> list:
@@ -27,9 +26,7 @@ def decode(line: str) -> str:
     :param line: line from the encoded file.
     :return: same decoded line. String.
     """
-    for princess in princesses:
-        base64.b64decode(princess)
-    return princess
+    return b64decode(line).decode('UTF-8')
 
 
 def extract_information(line: str) -> list:
@@ -93,5 +90,7 @@ def write(read_file):
 
 
 
-# if __name__ == '__main__':
+if __name__ == '__main__':
+    print(decode("TWFybmkgICAgICAgICAgICAgICAgICAgICAgICAgRklHSFRTIEZPUiBMSUZFICAgICAgICAgICAgICAgT2xkIFNo"
+                 "YWNrICAgICAgICAgICAgICAgICAgICAgV2lsbCBydWxlIHRoZSBraW5nZG9tCg=="))
 
