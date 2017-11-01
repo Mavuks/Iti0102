@@ -1,5 +1,8 @@
 """Generate list of princesses."""
 
+import base64
+
+
 
 def read(read_file) -> list:
     """
@@ -24,7 +27,8 @@ def decode(line: str) -> str:
     :param line: line from the encoded file.
     :return: same decoded line. String.
     """
-    pass
+    princes = princesses.split()
+    base64.b64decode(princes)
 
 
 def extract_information(line: str) -> list:
@@ -85,3 +89,6 @@ def write(read_file):
     :return: None
     """
     pass
+
+
+
