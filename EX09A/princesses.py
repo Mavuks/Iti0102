@@ -27,8 +27,9 @@ def decode(line: str) -> str:
     :param line: line from the encoded file.
     :return: same decoded line. String.
     """
-    princes = princesses.split()
-    base64.b64decode(princes)
+    for princess in princesses:
+        base64.b64decode(princess)
+    return princess
 
 
 def extract_information(line: str) -> list:
@@ -91,4 +92,6 @@ def write(read_file):
     pass
 
 
+
+# if __name__ == '__main__':
 
