@@ -1,7 +1,7 @@
 """Generate list of princesses."""
 
 from base64 import b64decode
-
+import re
 
 def read(read_file) -> list:
     """
@@ -40,7 +40,9 @@ def extract_information(line: str) -> list:
     :return: information about single princess
     """
     information = []
-    information.append(line)
+    kood = re.sub(r'(\s)\1{1,}', r'\1', line)
+
+    information.append(kood)
     return information
 
 
@@ -96,4 +98,5 @@ def write(read_file):
 if __name__ == '__main__':
     print(decode("TWFybmkgICAgICAgICAgICAgICAgICAgICAgICAgRklHSFRTIEZPUiBMSUZFICAgICAgICAgICAgICAgT2xkIFNo"
                  "YWNrICAgICAgICAgICAgICAgICAgICAgV2lsbCBydWxlIHRoZSBraW5nZG9tCg=="))
-
+    print(extract_information(
+        "Marni                         FIGHTS FOR LIFE               Old Shack                     Will rule the kingdom"))
