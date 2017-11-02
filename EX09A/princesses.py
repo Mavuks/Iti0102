@@ -39,7 +39,10 @@ def extract_information(line: str) -> list:
     :param line: decrypted line from the file.
     :return: information about single princess
     """
-    pass
+    information = []
+    information.append(line)
+    return information
+
 
 
 def filter_by_status(lines) -> list:
