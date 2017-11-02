@@ -3,14 +3,14 @@ import re
 def _correct_message(message):
     list = []
     arv = 0
-    kood = re.split(r'\s',message)
+    # kood = re.split(r'\s',message)
 
-    kooda = ''.join(kood[0])
-    kood1 = re.findall(r'[a-zA-Z]',kooda)
-    kood2= ''.join(kood1)
-    list.append(kood2)
+    # kooda = ''.join(kood[0])
+    # kood1 = re.findall(r'[a-zA-Z]',kooda)
+    # kood2= ''.join(kood1)
+    # list.append(kood2)
 
-    return list
+    return kood
 
 
 

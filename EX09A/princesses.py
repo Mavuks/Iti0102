@@ -42,6 +42,7 @@ def extract_information(line: str) -> list:
     information = []
     kood = re.sub(r'(\s)\1{1,}', r'\1', line)
 
+
     information.append(kood)
     return information
 
