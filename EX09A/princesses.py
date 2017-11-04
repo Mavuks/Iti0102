@@ -40,9 +40,7 @@ def extract_information(line: str) -> list:
     :return: information about single princess
     """
     information = []
-    kood = re.sub(r'(\s)\1{1,}', r'\1', line)
-
-
+    kood = re.sub(r'(\s)\1{2,}', r'\1', line)
     information.append(kood)
     return information
 
