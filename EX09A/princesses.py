@@ -72,9 +72,19 @@ def sort_by_status(filtered_lines) -> list:
     :return: sorted lines.
     """
     sorted = []
-    sort_order = {"FIGHTS FOR LIFE": 0, "INJURED": 1, "IN PANIC": 2, "BORED": 3}
-    sorted.append(filtered_lines.sort(key=lambda val: sort_order[val[1]]))
-    return sorted
+    for i in range(len(filtered_lines)):
+        if filtered_lines[i][1] == "FIGHTS FOR LIFE":
+            sorted.append(filtered_lines[i])
+    for i in range(len(filtered_lines)):
+        if filtered_lines[i][1] == "INJURED":
+            sorted.append(filtered_lines[i])
+    for i in range(len(filtered_lines)):
+        if filtered_lines[i][1] == "IN PANIC":
+            sorted.append(filtered_lines[i])
+    for i in range(len(filtered_lines)):
+        if filtered_lines[i][1] == "BORED":
+            sorted.append(filtered_lines[i])
+    return sorted()
 
 
 def write(read_file):
