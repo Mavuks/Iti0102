@@ -55,11 +55,11 @@ def filter_by_status(lines) -> list:
     :param lines: lines
     :return: list
     """
-    new_list = []
+    filtered = []
     for i in range(len(lines)):
         if lines[i][1] != "EATEN" and lines[i][1] != "SAVED" and lines[i][1] != "SLAYED THE DRAGON HERSELF":
-            new_list.append(lines[i])
-    return new_list
+            filtered.append(lines[i])
+    return filtered
 
 
 def sort_by_status(filtered_lines) -> list:
@@ -71,7 +71,17 @@ def sort_by_status(filtered_lines) -> list:
     :param filtered_lines:
     :return: sorted lines.
     """
-    pass
+    sorted = []
+    for i in range(len(filtered_lines)):
+        if filtered_lines[i][1] == "FIGHTS FOR LIFE":
+            sorted.append(filtered_lines[i])
+        if filtered_lines[i][1] == "INJURED":
+            sorted.append(filtered_lines[i])
+        if filtered_lines[i][1] == "IN PANIC":
+            sorted.append(filtered_lines[i])
+        if filtered_lines[i][1] == "BORED":
+            sorted.append(filtered_lines[i])
+    return sorted()
 
 
 def write(read_file):
