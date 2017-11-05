@@ -84,7 +84,7 @@ def sort_by_status(filtered_lines) -> list:
     for i in range(len(filtered_lines)):
         if filtered_lines[i][1] == "BORED":
             sorted.append(filtered_lines[i])
-    return sorted()
+    return sorted
 
 
 def write(read_file):
