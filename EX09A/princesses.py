@@ -40,7 +40,7 @@ def extract_information(line: str) -> list:
     :return: information about single princess
     """
     information = []
-    kood = re.sub(r'(\s)\1{2,}', r'\1', line)
+    kood = re.split(" +", line)
     information.append(kood)
     return information
 
@@ -50,12 +50,16 @@ def filter_by_status(lines) -> list:
     """
     Filter out non-relevant statuses.
 
-    Statuses to filter: "EATEN", "SAVED", "SLAYED THE DRAGON HERSELF". There is no point to save those.
+     Statuses to filter: "EATEN", "SAVED", "SLAYED THE DRAGON HERSELF". There is no point to save those.
 
     :param lines: lines
     :return: list
     """
-    pass
+    new_list = []
+    for i in range(len(lines)):
+        if lines[i][1] != "EATEN" and lines[i][1] != "SAVED" and lines[i][1] != "SLAYED THE DRAGON HERSELF":
+            new_list.append(lines[i])
+    return new_list
 
 
 def sort_by_status(filtered_lines) -> list:
