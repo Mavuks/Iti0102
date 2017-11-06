@@ -13,7 +13,7 @@ def read(read_file) -> list:
 
     while True:
         try:
-            match = open('dragon', 'r').readlines()
+            match = open('princesses', 'r').readlines()
         except FileNotFoundError:
             print("File not found!")
         else:
