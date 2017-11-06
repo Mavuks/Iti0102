@@ -15,10 +15,7 @@ def read(read_file) -> list:
         f = open(read_file)
     except FileNotFoundError:
         raise Exception('File not found')
-
-
     lines = [decode(line) for line in f.readlines()]
-
     return [extract_information(line) for line in lines [3:]]
 
 
@@ -47,13 +44,11 @@ def extract_information(line: str) -> list:
         "INJURED", "BORED", "EATEN", "SAVED",
         "IN PANIC", "SLAYED THE DRAGON HERSELF",
         "FIGHTS FOR LIFE",
-    
         "Dark Cave", "Dungeon", "Old Shack",
         "High Mountain", "Abandoned Prison",
         "Misty Swamp", "Ancient Ruins", "Castle",
         "Pub", "Town Hall", "Office",
         "Library", "Underworld", "Heaven",
-    
         "Pretty", "Can cook", "Likes books", "Programmer",
         "Will rule the kingdom", "Afraid of spiders",
         "Sassy", "None"
@@ -146,4 +141,3 @@ if __name__ == '__main__':
                  "YWNrICAgICAgICAgICAgICAgICAgICAgV2lsbCBydWxlIHRoZSBraW5nZG9tCg=="))
     print(extract_information(
         "Marni                         FIGHTS FOR LIFE               Old Shack                     Will rule the kingdom"))
-    print(write(read_file))
