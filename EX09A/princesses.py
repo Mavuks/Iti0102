@@ -1,7 +1,6 @@
 """Generate list of princesses."""
 
 from base64 import b64decode
-import re
 
 def read(read_file) -> list:
     """
@@ -129,7 +128,7 @@ def write(read_file):
     with open("princesses_to_save.txt", "w") as file:
         text = sort_by_status(filter_by_status(read(read_file)))
         for line in range(len(text)):
-            if text[line] == test[-1]:
+            if text[line] == text[-1]:
                 file.write(f'{text[line][0]}')
                 for i in range(1, len(text[line])):
                     file.write(f'\n{text[line][i]}')
