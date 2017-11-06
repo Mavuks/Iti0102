@@ -48,7 +48,7 @@ def extract_information(line: str) -> list:
         "High Mountain", "Abandoned Prison",
         "Misty Swamp", "Ancient Ruins", "Castle",
         "Pub", "Town Hall", "Office",
-        "Library", "Underworld", "Heaven"
+        "Library", "Underworld", "Heaven",
     
         "Pretty", "Can cook", "Likes books", "Programmer",
         "Will rule the kingdom", "Afraid of spiders",
