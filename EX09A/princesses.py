@@ -11,15 +11,14 @@ def read(read_file) -> list:
     :return: lines
     """
 
-    try:
-        with open("princesses.txt") as f:
-            content = f.readlines()
-    except:
-        return "File not found"
-
-
-    return content
-
+    while True:
+        try:
+            match = open('dragon', 'r').readlines()
+        except FileNotFoundError:
+            print("File not found!")
+        else:
+            break
+    return match
 
 def decode(line: str) -> str:
     """
