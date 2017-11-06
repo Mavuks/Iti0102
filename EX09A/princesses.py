@@ -11,17 +11,15 @@ def read(read_file) -> list:
     :return: lines
     """
 
-    lines = []
-
     try:
-        with open(princesses.txt, "r", encoding="UTF-8") as file:
-            for line in file:
-                lines.append(line.strip())
+        f = open(read_file)
     except FileNotFoundError:
-        print("File not found!")
-        return []
+        raise Exception('File not found')
 
-    return lines
+
+    lines = [decode(line) for line in f.readlines()]
+
+    return [extract_information(line) for line in lines [3:]]
 
 def decode(line: str) -> str:
     """
