@@ -15,7 +15,7 @@ def read(read_file) -> list:
         with open("princesses.txt", "r", encoding='utf-8') as file:
             for line in file:
                 princesses.append(line.strip())
-    except:
+    except Exception:
         print("File not found")
         return []
 
