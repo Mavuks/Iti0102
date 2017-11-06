@@ -14,9 +14,9 @@ def read(read_file) -> list:
     try:
         f = open(read_file)
     except FileNotFoundError:
-        raise Exception('File not found')
+        raise Exception('File not found!')
     lines = [decode(line) for line in f.readlines()]
-    return [extract_information(line) for line in lines [3:]]
+    return [extract_information(line) for line in lines[3:]]
 
 
 def decode(line: str) -> str:
