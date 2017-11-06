@@ -150,4 +150,3 @@ if __name__ == '__main__':
     print(extract_information(
         "Marni                         FIGHTS FOR LIFE               Old Shack                     Will rule the kingdom"))
     print(write(read_file))
-
