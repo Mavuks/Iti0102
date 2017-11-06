@@ -10,16 +10,15 @@ def read(read_file) -> list:
     :exception: Exception
     :return: lines
     """
-    princesses = []
+
     try:
-        with open("princesses.txt", "r", encoding='utf-8') as file:
-            for line in file:
-                princesses.append(line.strip())
+        with open("princesses.txt") as f:
+            content = f.readlines()
     except:
         return "File not found"
 
 
-    return princesses
+    return content
 
 
 def decode(line: str) -> str:
