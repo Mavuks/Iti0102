@@ -2,6 +2,7 @@
 
 from base64 import b64decode
 
+
 def read(read_file) -> list:
     """
     Read, decrypt and save information from the given file.
@@ -10,7 +11,6 @@ def read(read_file) -> list:
     :exception: Exception
     :return: lines
     """
-
     try:
         f = open(read_file)
     except FileNotFoundError:
@@ -20,6 +20,7 @@ def read(read_file) -> list:
     lines = [decode(line) for line in f.readlines()]
 
     return [extract_information(line) for line in lines [3:]]
+
 
 def decode(line: str) -> str:
     """
@@ -63,9 +64,6 @@ def extract_information(line: str) -> list:
         if status in line:
             information.append(status)
     return information
-
-
-
 
 
 def filter_by_status(lines) -> list:
@@ -143,11 +141,9 @@ def write(read_file):
         file.close()
 
 
-
 if __name__ == '__main__':
     print(decode("TWFybmkgICAgICAgICAgICAgICAgICAgICAgICAgRklHSFRTIEZPUiBMSUZFICAgICAgICAgICAgICAgT2xkIFNo"
                  "YWNrICAgICAgICAgICAgICAgICAgICAgV2lsbCBydWxlIHRoZSBraW5nZG9tCg=="))
     print(extract_information(
         "Marni                         FIGHTS FOR LIFE               Old Shack                     Will rule the kingdom"))
-
-
+    print(write(read_file))
