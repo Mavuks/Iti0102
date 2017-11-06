@@ -11,14 +11,17 @@ def read(read_file) -> list:
     :return: lines
     """
 
-    while True:
-        try:
-            match = open('princesses.txt', 'r').readlines()
-        except FileNotFoundError:
-            print("File not found!")
-        else:
-            break
-    return match
+    lines = []
+
+    try:
+        with open(princesses.txt, "r", encoding="UTF-8") as line:
+            for name in line:
+                lines.append(name.strip())
+    except FileNotFoundError:
+        print("File not found!")
+        return []
+
+    return lines
 
 def decode(line: str) -> str:
     """
@@ -149,3 +152,4 @@ if __name__ == '__main__':
     print(extract_information(
         "Marni                         FIGHTS FOR LIFE               Old Shack                     Will rule the kingdom"))
     print(write(read_file))
+
