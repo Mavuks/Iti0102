@@ -14,9 +14,9 @@ def read(read_file) -> list:
     lines = []
 
     try:
-        with open(princesses.txt, "r", encoding="UTF-8") as line:
-            for name in line:
-                lines.append(name.strip())
+        with open(princesses.txt, "r", encoding="UTF-8") as file:
+            for line in file:
+                lines.append(line.strip())
     except FileNotFoundError:
         print("File not found!")
         return []
@@ -151,5 +151,5 @@ if __name__ == '__main__':
                  "YWNrICAgICAgICAgICAgICAgICAgICAgV2lsbCBydWxlIHRoZSBraW5nZG9tCg=="))
     print(extract_information(
         "Marni                         FIGHTS FOR LIFE               Old Shack                     Will rule the kingdom"))
-    print(write(read_file))
+
 
