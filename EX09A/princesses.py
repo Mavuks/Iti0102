@@ -11,9 +11,14 @@ def read(read_file) -> list:
     :return: lines
     """
     princesses = []
-    with open("princesses.txt", encoding='utf-8') as file:
-        for line in file:
-            princesses.append(line.strip())
+    try:
+        with open("princesses.txt", encoding='utf-8') as file:
+            for line in file:
+                princesses.append(line.strip())
+    except FileNotFoundError:
+        print("File not found")
+        return []
+
     return princesses
 
 
