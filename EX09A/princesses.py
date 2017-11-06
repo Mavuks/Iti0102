@@ -39,10 +39,29 @@ def extract_information(line: str) -> list:
     :param line: decrypted line from the file.
     :return: information about single princess
     """
+    statuses = [
+        "INJURED", "BORED", "EATEN", "SAVED",
+        "IN PANIC", "SLAYED THE DRAGON HERSELF",
+        "FIGHTS FOR LIFE",
+    
+        "Dark Cave", "Dungeon", "Old Shack",
+        "High Mountain", "Abandoned Prison",
+        "Misty Swamp", "Ancient Ruins", "Castle",
+        "Pub", "Town Hall", "Office",
+        "Library", "Underworld", "Heaven"
+    
+        "Pretty", "Can cook", "Likes books", "Programmer",
+        "Will rule the kingdom", "Afraid of spiders",
+        "Sassy", "None"
+    ]
     information = []
-    kood = re.split(" +", line)
-    information.append(kood)
+    information.append(line.split()[0])
+    for status in statuses:
+        if status in line:
+            information.append(status)
     return information
+
+
 
 
 
