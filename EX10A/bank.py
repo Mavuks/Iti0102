@@ -55,6 +55,7 @@ class Account:
         """
         return self.name
 
+
 paul_account = Account("Paul", 100.00)
 jakob_account = Account("Jakob", 500.00)
 
