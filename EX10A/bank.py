@@ -22,6 +22,12 @@ class Account:
         :param amount: amount to withdraw from account, has to be positive
         and the balance can't go below 0.
         """
+        if amount > 0:
+            self.balance -= amount
+        else:
+            pass
+        if amount > self.balance:
+            self.balance = 0
 
 
     def deposit(self, amount):
@@ -30,7 +36,10 @@ class Account:
 
         :param amount: amount to deposit to account, has to be positive
         """
-        pass
+        if amount > 0:
+            self.balance += amount
+        else:
+            pass
 
     def get_balance(self):
         """
@@ -54,3 +63,16 @@ class Account:
     print("Initial balance")
     print(paul_account.get_balance())  # 100.0
     print(jakob_account.get_balance())  # 500.0
+    assert paul_account.get_balance() == 100
+    assert jakob_account.get_balance() == 500
+
+    jakob_account.withdraw(250.00)
+    assert jakob_account.get_balance() == 250
+    print("Jakob's balance is now ", jakob_account.get_balance())  # Jakob's balance is now  250.0
+    paul_account.deposit(250.00)
+    assert paul_account.get_balance() == 350
+    print("Paul's balance is now", paul_account.get_balance())  # Paul's balance is now 350.0
+
+    print("Final state")
+    print(paul_account.get_balance())  # 350.0
+    print(jakob_account.get_balance())  # 250.0
