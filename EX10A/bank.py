@@ -14,7 +14,6 @@ class Account:
         self.name = name
         self.balance = balance
 
-
     def withdraw(self, amount):
         """
         Withdraw money from account.
@@ -28,7 +27,6 @@ class Account:
             pass
         if amount > self.balance:
             self.balance = 0
-
 
     def deposit(self, amount):
         """
@@ -59,6 +57,7 @@ class Account:
 
 paul_account = Account("Paul", 100.00)
 jakob_account = Account("Jakob", 500.00)
+
 
 print("Initial balance")
 print(paul_account.get_balance())  # 100.0
