@@ -57,22 +57,22 @@ class Account:
         """
         return self.name
 
-    paul_account = Account("Paul", 100.00)
-    jakob_account = Account("Jakob", 500.00)
+paul_account = Account("Paul", 100.00)
+jakob_account = Account("Jakob", 500.00)
 
-    print("Initial balance")
-    print(paul_account.get_balance())  # 100.0
-    print(jakob_account.get_balance())  # 500.0
-    assert paul_account.get_balance() == 100
-    assert jakob_account.get_balance() == 500
+print("Initial balance")
+print(paul_account.get_balance())  # 100.0
+print(jakob_account.get_balance())  # 500.0
+assert paul_account.get_balance() == 100
+assert jakob_account.get_balance() == 500
 
-    jakob_account.withdraw(250.00)
-    assert jakob_account.get_balance() == 250
-    print("Jakob's balance is now ", jakob_account.get_balance())  # Jakob's balance is now  250.0
-    paul_account.deposit(250.00)
-    assert paul_account.get_balance() == 350
-    print("Paul's balance is now", paul_account.get_balance())  # Paul's balance is now 350.0
+jakob_account.withdraw(250.00)
+assert jakob_account.get_balance() == 250
+print("Jakob's balance is now ", jakob_account.get_balance())  # Jakob's balance is now  250.0
+paul_account.deposit(250.00)
+assert paul_account.get_balance() == 350
+print("Paul's balance is now", paul_account.get_balance())  # Paul's balance is now 350.0
 
-    print("Final state")
-    print(paul_account.get_balance())  # 350.0
-    print(jakob_account.get_balance())  # 250.0
+print("Final state")
+print(paul_account.get_balance())  # 350.0
+print(jakob_account.get_balance())  # 250.0
