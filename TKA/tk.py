@@ -44,13 +44,13 @@ def swap_pos(numbers, pos):
     :param pos: int, position
     :return: list of ints
     """
-    list = []
-
-    for i in numbers:
-
-
-
-    return list
+    # list = []
+    #
+    # for i in numbers:
+    #
+    #
+    #
+    # return list
 
 
 def merge_lists(a, b):
