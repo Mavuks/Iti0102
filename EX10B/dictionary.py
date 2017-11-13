@@ -6,21 +6,47 @@ class Dictionary:
 
     def __init__(self, initial_data):
         """fdsfdsf."""
+        small_dic = []
+        kriips = "-"
+        symbols = "0123456789\"#$%&'()*+,./:;<=>?@[\\]^_` {|}~!"
+        word = initial_data.split("\n")
+        for line in word:
+            word1 = line.split(" - ")
+
+        if " " in word1[0]:
+            pass
+        for symbol in symbols:
+            if symbol in word1[0]:
+                pass
+        if len(word1[0]) < 1:
+            pass
+        if word1[0][0] and word1[0][len(word1) -1] is "-":
+            pass
+        for char in kriips:
+            count = word1[0].count(char)
+            if count > 1:
+                pass
+        if len(word1[1]) < 1:
+            pass
+
+        small_dic.append(word1[0])
+        small_dic.append(word1[1])
+
 
     def get_definitions(self, word):
         """gert."""
 
 
     def is_word_noun(self, word):
-        """gfdgdf."""
+        """Is a word noun."""
 
 
     def is_word_verb(self, word):
-        """fdsgffds."""
+        """Is a word verb."""
 
 
     def is_word_adjective(self, word):
-        """gdsgsg."""
+        """Is a word adjective."""
 
 
     def get_all_nouns(self):
@@ -36,32 +62,32 @@ class Dictionary:
 
 
     def search(self, subword, min_len, max_len):
-        """vsdfgdfg."""
+        """search."""
 
 
 
-# if __name__ == '__main__':
-#     small_dict_data = "\n".join(["(a)beautiful - very pleasing or satisfying",
-#                                  "(a)wise - possessed of or characterized by scholarly knowledge or learning",
-#                                  "(a)kind -",
-#                                  "(a)Warm - conserving or maintaining warmth or heat",
-#                                  "(v)Claim - to assert or maintain as a fact",
-#                                  "(n)ph one - a portable electronic telephone device",
-#                                  "(a)wise - having the power to judge what is true or right",
-#                                  "[n]place - a particular portion of space, whether of definite or indefinite exten",
-#                                  "(a)well-known - clearly or fully known",
-#                                  "(v)-create - to cause to come into being",
-#                                  "(n)law - the principles and regulations established in a community by some authority",
-#                                  "(n)injury - harm or damage that is done or sustained",
-#                                  "",
-#                                  "choice - an act or instance of selection",
-#                                  "(n)fire - a burning mass of material, as on a hearth or in a furnace",
-#                                  "(b)consume - to destroy or expend by use",
-#                                  "(v)consume - to eat or drink up; devour",
-#                                  "(v)fire - to expose to the action of fire; subject to heat",
-#                                  "(v)fire - to inspire"])
-#
-#     small_dictionary = Dictionary(small_dict_data)
+if __name__ == '__main__':
+    small_dict_data = "\n".join(["(a)beautiful - very pleasing or satisfying",
+                                 "(a)wise - possessed of or characterized by scholarly knowledge or learning",
+                                 "(a)kind -",
+                                 "(a)Warm - conserving or maintaining warmth or heat",
+                                 "(v)Claim - to assert or maintain as a fact",
+                                 "(n)ph one - a portable electronic telephone device",
+                                 "(a)wise - having the power to judge what is true or right",
+                                 "[n]place - a particular portion of space, whether of definite or indefinite exten",
+                                 "(a)well-known - clearly or fully known",
+                                 "(v)-create - to cause to come into being",
+                                 "(n)law - the principles and regulations established in a community by some authority",
+                                 "(n)injury - harm or damage that is done or sustained",
+                                 "",
+                                 "choice - an act or instance of selection",
+                                 "(n)fire - a burning mass of material, as on a hearth or in a furnace",
+                                 "(b)consume - to destroy or expend by use",
+                                 "(v)consume - to eat or drink up; devour",
+                                 "(v)fire - to expose to the action of fire; subject to heat",
+                                 "(v)fire - to inspire"])
+
+    small_dictionary = Dictionary(small_dict_data)
 #
 #     assert len(small_dictionary.get_definitions("kind")) == 0
 #     assert len(small_dictionary.get_definitions("phone")) == 0
@@ -109,4 +135,3 @@ class Dictionary:
 #     assert 'injury' in search_result
 #
 #     print("Ready for submission!")
-
