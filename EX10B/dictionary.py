@@ -12,12 +12,9 @@ class Dictionary:
         word = initial_data.split("\n")
         for line in word:
             word1 = line.split(" - ")
-
+        # word1 = word1.lower()
         if " " in word1[0]:
             pass
-        for symbol in symbols:
-            if symbol in word1[0]:
-                pass
         if len(word1[0]) < 1:
             pass
         if word1[0][0] and word1[0][len(word1) -1] is "-":
@@ -26,8 +23,12 @@ class Dictionary:
             count = word1[0].count(char)
             if count > 1:
                 pass
-        if len(word1[1]) < 1:
+        if len(word1[1]) < 1 and not word1.isalpha():
             pass
+        word1[0].replace(word1[0][:3], '')
+        for symbol in symbols:
+            if symbol in word1[0]:
+                pass
 
         small_dic.append(word1[0])
         small_dic.append(word1[1])
