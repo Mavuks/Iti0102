@@ -10,6 +10,7 @@ class Dictionary:
         kriips = "-"
         symbols = "0123456789\"#$%&'()*+,./:;<=>?@[\\]^_` {|}~!"
         word = initial_data.split("\n")
+
         for line in word:
             word1 = line.split(" - ")
         # word1 = word1.lower()
