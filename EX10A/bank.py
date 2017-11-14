@@ -23,8 +23,6 @@ class Account:
         """
         if amount > 0:
             self.balance -= amount
-        else:
-            pass
         if amount > self.balance:
             self.balance = 0
 
@@ -36,8 +34,7 @@ class Account:
         """
         if amount > 0:
             self.balance += amount
-        else:
-            pass
+
 
     def get_balance(self):
         """

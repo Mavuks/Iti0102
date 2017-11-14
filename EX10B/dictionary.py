@@ -18,7 +18,7 @@ class Dictionary:
         for line in list_of_words:
 
             if len(line.split(" - ", 1)) == 2:
-                word, definiton = line.split(" - ", 1)
+                word, definition = line.split(" - ", 1)
 
             if len(word) < 4:
                 continue
@@ -26,13 +26,13 @@ class Dictionary:
             wordK = word[0] == "(" and word[2] == ")" and word[1] in "anv" and len(word[3:]) > 0
             wordK2 = all([char not in word[3:].lower() for char in "0123456789!\"#$%&'()*+,./:;<=>?@[\\]^_`{|}~"])
             wordK3 = len(word) - 1 !=word.find("-") == word.rfind("-") != 3
-            wordK4 = len(definiton) > 0 and any([char in string.ascii_letters for char in definiton])
+            wordK4 = len(definition) > 0 and any([char in string.ascii_letters for char in definition])
 
             if wordK and wordK2 and wordK3 and wordK4:
                 if word[3:].lower() in self.word_dict:
-                    self.word_dict[word[3:].lower()].append(definiton)
+                    self.word_dict[word[3:].lower()].append(definition)
                 else:
-                    self.word_dict[word[3:].lower()] = [definiton]
+                    self.word_dict[word[3:].lower()] = [definition]
 
                 if word[1] == "n" and word[3:].lower() not in self.noun:
                     self.noun.append(word[3:].lower())
@@ -40,8 +40,6 @@ class Dictionary:
                     self.adje.append(word[3:].lower())
                 if word[1] == "v" and word[3:].lower() not in self.verb:
                     self.verb.append(word[3:].lower())
-
-
 
 
     def get_definitions(self, word):
