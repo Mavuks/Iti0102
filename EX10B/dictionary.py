@@ -19,6 +19,8 @@ class Dictionary:
 
             if len(line.split(" - ", 1)) == 2:
                 word, definition = line.split(" - ", 1)
+            else:
+                continue
 
             if len(word) < 4:
                 continue
@@ -97,51 +99,51 @@ if __name__ == '__main__':
                                  "(v)fire - to inspire"])
 
     small_dictionary = Dictionary(small_dict_data)
-#
-#     assert len(small_dictionary.get_definitions("kind")) == 0
-#     assert len(small_dictionary.get_definitions("phone")) == 0
-#     assert len(small_dictionary.get_definitions("ph one")) == 0
-#     assert len(small_dictionary.get_definitions("choice")) == 0
-#     assert len(small_dictionary.get_definitions("-create")) == 0
-#     assert len(small_dictionary.get_definitions("create")) == 0
-#     assert len(small_dictionary.get_definitions("beautiful")) == 1
-#     assert len(small_dictionary.get_definitions("fire")) == 3
-#     assert len(small_dictionary.get_definitions("Consume")) == 1
-#     assert len(small_dictionary.get_definitions("wise")) == 2
-#     assert small_dictionary.is_word_noun("fire") is True
-#     assert small_dictionary.is_word_verb("fire") is True
-#     assert small_dictionary.is_word_adjective('warm') is True
-#     assert small_dictionary.is_word_noun("place") is False
-#
-#     all_nouns = small_dictionary.get_all_nouns()
-#     assert isinstance(all_nouns, list)
-#
-#     assert len(all_nouns) == 3
-#     assert "law" in all_nouns
-#     assert "injury" in all_nouns
-#     assert "fire" in all_nouns
-#
-#     all_verbs = small_dictionary.get_all_verbs()
-#     assert isinstance(all_verbs, list)
-#
-#     assert len(all_verbs) == 3
-#     assert "consume" in all_verbs
-#     assert "claim" in all_verbs
-#     assert "fire" in all_verbs
-#
-#     all_adjectives = small_dictionary.get_all_adjectives()
-#     assert isinstance(all_adjectives, list)
-#
-#     assert len(all_adjectives) == 4
-#     assert "wise" in all_adjectives
-#     assert "warm" in all_adjectives
-#     assert "beautiful" in all_adjectives
-#     assert "well-known" in all_adjectives
-#
-#     search_result = small_dictionary.search("N", min_len=5, max_len=8)
-#     assert len(search_result) == 2
-#     assert 'consume' in search_result
-#     assert 'injury' in search_result
-#
-#     print("Ready for submission!")
+
+    assert len(small_dictionary.get_definitions("kind")) == 0
+    assert len(small_dictionary.get_definitions("phone")) == 0
+    assert len(small_dictionary.get_definitions("ph one")) == 0
+    assert len(small_dictionary.get_definitions("choice")) == 0
+    assert len(small_dictionary.get_definitions("-create")) == 0
+    assert len(small_dictionary.get_definitions("create")) == 0
+    assert len(small_dictionary.get_definitions("beautiful")) == 1
+    assert len(small_dictionary.get_definitions("fire")) == 3
+    assert len(small_dictionary.get_definitions("Consume")) == 1
+    assert len(small_dictionary.get_definitions("wise")) == 2
+    assert small_dictionary.is_word_noun("fire") is True
+    assert small_dictionary.is_word_verb("fire") is True
+    assert small_dictionary.is_word_adjective('warm') is True
+    assert small_dictionary.is_word_noun("place") is False
+
+    all_nouns = small_dictionary.get_all_nouns()
+    assert isinstance(all_nouns, list)
+
+    assert len(all_nouns) == 3
+    assert "law" in all_nouns
+    assert "injury" in all_nouns
+    assert "fire" in all_nouns
+
+    all_verbs = small_dictionary.get_all_verbs()
+    assert isinstance(all_verbs, list)
+
+    assert len(all_verbs) == 3
+    assert "consume" in all_verbs
+    assert "claim" in all_verbs
+    assert "fire" in all_verbs
+
+    all_adjectives = small_dictionary.get_all_adjectives()
+    assert isinstance(all_adjectives, list)
+
+    assert len(all_adjectives) == 4
+    assert "wise" in all_adjectives
+    assert "warm" in all_adjectives
+    assert "beautiful" in all_adjectives
+    assert "well-known" in all_adjectives
+
+    search_result = small_dictionary.search("N", min_len=5, max_len=8)
+    assert len(search_result) == 2
+    assert 'consume' in search_result
+    assert 'injury' in search_result
+
+    print("Ready for submission!")
 
