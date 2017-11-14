@@ -1,5 +1,6 @@
-
+"""Simple dictionary."""
 import string
+
 
 class Dictionary:
     """fasdfsdf."""
@@ -10,7 +11,9 @@ class Dictionary:
         self.verb = []
         self.noun = []
         self.adje = []
-        list_of_words = initial_data.spilt("\n")
+
+
+        list_of_words = initial_data.split("\n")
 
         for line in list_of_words:
 
@@ -27,7 +30,7 @@ class Dictionary:
 
             if wordK and wordK2 and wordK3 and wordK4:
                 if word[3:].lower() in self.word_dict:
-                    self.word_dict[word[3:].lower()].appennd(definiton)
+                    self.word_dict[word[3:].lower()].append(definiton)
                 else:
                     self.word_dict[word[3:].lower()] = [definiton]
 
