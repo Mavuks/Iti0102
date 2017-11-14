@@ -6,13 +6,13 @@ class Dictionary:
 
     def __init__(self, initial_data):
         """fdsfdsf."""
-        small_dic = []
+        small_dic = {}
         kriips = "-"
         symbols = "0123456789\"#$%&'()*+,./:;<=>?@[\\]^_` {|}~!"
         word = initial_data.split("\n")
 
-        for line in word:
-            word1 = line.split(" - ")
+        for x in word:
+            word1 = x.split(" - ")
         # word1 = word1.lower()
         if " " in word1[0]:
             pass
@@ -31,8 +31,7 @@ class Dictionary:
             if symbol in word1[0]:
                 pass
 
-        small_dic.append(word1[0])
-        small_dic.append(word1[1])
+        small_dic[word1[0]] = word1[1]
 
 
     def get_definitions(self, word):
