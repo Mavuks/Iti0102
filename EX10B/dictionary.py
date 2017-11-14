@@ -1,37 +1,44 @@
 
-
+import string
 
 class Dictionary:
     """fasdfsdf."""
 
     def __init__(self, initial_data):
         """fdsfdsf."""
-        small_dic = {}
-        kriips = "-"
-        symbols = "0123456789\"#$%&'()*+,./:;<=>?@[\\]^_` {|}~!"
-        word = initial_data.split("\n")
+        self.word_dict = {}
+        self.verb = []
+        self.noun = []
+        self.adje = []
+        list_of_words = initial_data.spilt("\n")
 
-        for x in word:
-            word1 = x.split(" - ")
-        # word1 = word1.lower()
-        if " " in word1[0]:
-            pass
-        if len(word1[0]) < 1:
-            pass
-        if word1[0][0] and word1[0][len(word1) -1] is "-":
-            pass
-        for char in kriips:
-            count = word1[0].count(char)
-            if count > 1:
-                pass
-        if len(word1[1]) < 1 and not word1.isalpha():
-            pass
-        word1[0].replace(word1[0][:3], '')
-        for symbol in symbols:
-            if symbol in word1[0]:
-                pass
+        for line in list_of_words:
 
-        small_dic[word1[0]] = word1[1]
+            if len(line.split(" - ", 1)) == 2:
+                word, definiton = line.split(" - ", 1)
+
+            if len(word) < 4:
+                continue
+
+            wordK = word[0] == "(" and word[2] == ")" and word[1] in "anv" and len(word[3:]) > 0
+            wordK2 = all([char not in word[3:].lower() for char in "0123456789!\"#$%&'()*+,./:;<=>?@[\\]^_`{|}~"])
+            wordK3 = len(word) - 1 !=word.find("-") == word.rfind("-") != 3
+            wordK4 = len(definiton) > 0 and any([char in string.ascii_letters for char in definiton])
+
+            if wordK and wordK2 and wordK3 and wordK4:
+                if word[3:].lower() in self.word_dict:
+                    self.word_dict[word[3:].lower()].appennd(definiton)
+                else:
+                    self.word_dict[word[3:].lower()] = [definiton]
+
+                if word[1] == "n" and word[3:].lower() not in self.noun:
+                    self.noun.append(word[3:].lower())
+                if word[1] == "a" and word[3:].lower() not in self.adje:
+                    self.adje.append(word[3:].lower())
+                if word[1] == "v" and word[3:].lower() not in self.verb:
+                    self.verb.append(word[3:].lower())
+
+
 
 
     def get_definitions(self, word):
