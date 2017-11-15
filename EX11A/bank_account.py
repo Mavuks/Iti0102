@@ -12,7 +12,12 @@ class BankAccount:
 
     def withdraw(self, amount):
         """A."""
-
+        if amount > self.balance:
+            return False
+        if amount < 0:
+            return False
+        self.balance -= amount
+        return True
 
     def deposit(self, amount):
         """A."""
@@ -20,7 +25,7 @@ class BankAccount:
 
     def get_balance(self):
         """A."""
-
+        return self.balance
     def get_name(self):
         """A."""
         return self.name
@@ -30,6 +35,7 @@ class BankAccount:
 
 
 if __name__ == '__main__':
+
     mary_account = BankAccount("Mary", 100)
     guido_account = BankAccount("Guido", 150)
     mary_second_account = BankAccount("Mary", 78.01)
