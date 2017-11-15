@@ -23,7 +23,8 @@ class BankAccount:
         """A."""
         self.balance += amount
         if amount < 0:
-            pass
+            self.balance
+
 
     def get_balance(self):
         """A."""
