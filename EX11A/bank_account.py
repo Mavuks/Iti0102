@@ -21,9 +21,11 @@ class BankAccount:
 
     def deposit(self, amount):
         """A."""
-        self.balance += amount
-        if amount < 0:
-            return False
+        if amount > 0:
+            self.balance += amount
+        else:
+            pass
+
 
 
     def get_balance(self):
