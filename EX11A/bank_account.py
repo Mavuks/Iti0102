@@ -41,7 +41,7 @@ class BankAccount:
         """A."""
         if amount < 0:
             return False
-        if self.balance >=amount * (1+ fee):
+        if self.balance >=amount * (1 + fee):
             target.balance += amount
             self.balance -=self.withdraw(amount * (1 + fee))
             return True
