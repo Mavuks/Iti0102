@@ -37,9 +37,12 @@ class BankAccount:
         """A."""
         return self.name
 
-
     def transfer(self, target, amount, fee):
         """A."""
+        target = self.name
+        if self.balance > (amount * fee + amount):
+            return True
+
 
 
 if __name__ == '__main__':
