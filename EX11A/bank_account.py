@@ -11,14 +11,12 @@ class BankAccount:
         if self.balance < 0:
             self.balance = 0
 
-
     def withdraw(self, amount):
         """A."""
         if amount > self.balance or amount < 0:
             return False
         self.balance -= amount
         return True
-
 
     def deposit(self, amount):
         """A."""
@@ -27,12 +25,9 @@ class BankAccount:
         else:
             self.balance = self.balance
 
-
     def get_balance(self):
         """A."""
-
         return self.balance
-
 
     def get_name(self):
         """A."""
@@ -55,8 +50,6 @@ class BankAccount:
             return True
         else:
             return False
-
-
 
 
 if __name__ == '__main__':
