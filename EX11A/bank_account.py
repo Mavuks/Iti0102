@@ -33,7 +33,7 @@ class BankAccount:
         """A."""
         return self.name
 
-    def transfer(self, target, amount, fee = 0.01):
+    def transfer(self, target, amount, fee=0.01):
         """A."""
         if target is None:
             return False
