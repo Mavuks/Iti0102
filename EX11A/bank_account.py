@@ -24,7 +24,8 @@ class BankAccount:
         """A."""
         if amount > 0:
             self.balance += amount
-
+        else:
+            self.balance = self.balance
 
 
     def get_balance(self):
@@ -39,22 +40,23 @@ class BankAccount:
 
     def transfer(self, target, amount, fee = 0.01):
         """A."""
-        if target == 0:
+        if target is None:
             return False
         if amount < 0:
             return False
-        if self.balance >= amount:
-            if self.get_name() == target.get_name():
-                fee = fee / 2
-            elif self == target:
-                fee = 0
-            target.balance = target.deposit(amount)
-            self.balance = self.withdraw(amount * (1 + fee))
-            print(target.get_balance())
-            print(self.get_balance())
+        if self == target:
+            fee = 0
+        elif self.get_name() == target.get_name():
+            fee /= 2
+            print(fee)
+        if self.get_balance() >= amount * (1 + fee):
+            target.deposit(amount)
+            self.withdraw(amount * (1 + fee))
             return True
         else:
             return False
+
+
 
 
 
