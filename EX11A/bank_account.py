@@ -30,6 +30,8 @@ class BankAccount:
 
     def get_balance(self):
         """A."""
+        if self.balance < 0:
+            return False
         return self.balance
 
 
@@ -45,6 +47,13 @@ class BankAccount:
             target.balance += amount
             self.balance -=self.withdraw(amount * (1 + fee))
             return True
+        if self.name == target:
+            target.balance += amount
+            return True
+
+
+
+
 
 
 
