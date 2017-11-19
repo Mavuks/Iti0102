@@ -12,10 +12,9 @@ class BankAccount:
 
     def withdraw(self, amount):
         """A."""
-        if amount > self.balance:
-            return False
-        if amount < 0:
-            return False
+
+        if amount > self.balance or amount < 0 or self.balance < 0 or self.balance == 0:
+           return False
         self.balance -= amount
         return True
 
