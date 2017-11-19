@@ -59,7 +59,6 @@ class BankAccount:
 
 
 
-
 if __name__ == '__main__':
 
     mary_account = BankAccount("Mary", 100)
