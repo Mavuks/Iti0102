@@ -30,8 +30,6 @@ class BankAccount:
 
     def get_balance(self):
         """A."""
-        if self.balance < 0:
-            return False
 
         return self.balance
 
