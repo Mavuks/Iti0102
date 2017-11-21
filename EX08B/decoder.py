@@ -27,8 +27,6 @@ def _encrypt_message(message, shift):
     return clap.caesars_code(message, shift, False)
 
 
-
-
 def get_corrected_encrypted_message(initial_message, shift):
     """
     Correct message and then encrypt it.

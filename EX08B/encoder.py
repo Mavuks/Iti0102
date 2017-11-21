@@ -38,4 +38,3 @@ def get_corrected_encrypted_message(initial_message, shift):
     :return: Corrected encrypted message.
     """
     return _encrypt_message(_correct_message(initial_message), shift)
-

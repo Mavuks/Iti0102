@@ -14,8 +14,6 @@ def get_end(piece, true_message):
                 break
 
 
-
-
 def give_corrected_piece(piece):
     """Give corrected piece."""
     true_message = []
@@ -64,8 +62,6 @@ def caesars_code(message, shift, encrypted=True):
         else:
             text += char
     return text
-
-
 
 
 def encrypt(char, encrypted, shift):
