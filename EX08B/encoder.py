@@ -1,7 +1,6 @@
 """Encodes message."""
 import filler
 
-
 def _correct_message(message):
     """
     Turn given message into a readable one.

@@ -1,41 +1,32 @@
-"""Encodes message."""
+"""Decodes messages."""
+import encoder
 import filler
 
 
-def _correct_message(message):
+def _decrypt_message(encrypted_message, shift):
     """
-    Turn given message into a readable one.
+    Decrypt encrypted message using the given shift.
 
-    :param message: Given message.
-    :return: The corrected message.
+    :param encrypted_message: Message which was encrypted by _encrypt_message.
+    :param shift: The amount of letters needed to shift forward.
+    :return: Decrypted message.
     """
-    true_message = []
-    words = message.split(" ")
-    for word in words:
-        true_message.append(filler.give_corrected_piece(word))
-    return "".join(true_message)[:-1]
+    return filler.caesars_code(encrypted_message, shift)
 
 
-def _decrypt_message(message, shift):
+def get_message(initial_message, shift, decrypt=False):
     """
-    Encrypt message using Caesar's cipher.
+    Get message from initial message using given shift.
 
-    :param message: Given message to encrypt.
-    :param shift: How many letters to shift.
-    :return: Encrypted message.
+    :param initial_message: The first dirty version of a message.
+    :param shift: How many letters does the cipher shift
+    :param decrypt: To decrypt on encrypt, that is the question
+    :return: The message.
     """
-    return filler.caesars_code(message, shift, False)
-
-
-def get_corrected_encrypted_message(initial_message, shift):
-    """
-    Correct message and then encrypt it.
-
-    :param initial_message: The dirty part of the message.
-    :param shift: The amount of letters shifted in cipher.
-    :return: Corrected encrypted message.
-    """
-    return _encrypt_message(_correct_message(initial_message), shift)
+    if decrypt is True:
+        return _decrypt_message(encoder.get_corrected_encrypted_message(initial_message, shift), shift)
+    elif decrypt is False:
+        return encoder.get_corrected_encrypted_message(initial_message, shift)
 
 print(_decrypt_message("hello world", 17)) # => qnuux fxaum
 print(_decrypt_message("az!", 1)) # => zy!
