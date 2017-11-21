@@ -16,7 +16,7 @@ def _correct_message(message):
     return "".join(true_message)[:-1]
 
 
-def _encrypt_message(message, shift):
+def _decrypt_message(message, shift):
     """
     Encrypt message using Caesar's cipher.
 
@@ -36,3 +36,7 @@ def get_corrected_encrypted_message(initial_message, shift):
     :return: Corrected encrypted message.
     """
     return _encrypt_message(_correct_message(initial_message), shift)
+
+print(_decrypt_message("hello world", 17)) # => qnuux fxaum
+print(_decrypt_message("az!", 1)) # => zy!
+print(_decrypt_message("AbCxYz", 10))  # => QrSnOp

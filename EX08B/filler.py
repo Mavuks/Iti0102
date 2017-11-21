@@ -73,3 +73,4 @@ def encrypt(char, encrypted, shift):
         stay_in_upper = ord(char) + shift
         stay_in_lower = ord(char) + shift
     return stay_in_lower, stay_in_upper
+
