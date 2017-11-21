@@ -1,5 +1,7 @@
 """Encodes message."""
-import filler
+
+
+import clap
 
 
 def _correct_message(message):
@@ -12,7 +14,7 @@ def _correct_message(message):
     true_message = []
     words = message.split(" ")
     for word in words:
-        true_message.append(filler.give_corrected_piece(word))
+        true_message.append(clap.give_corrected_piece(word))
     return "".join(true_message)[:-1]
 
 
@@ -24,7 +26,7 @@ def _encrypt_message(message, shift):
     :param shift: How many letters to shift.
     :return: Encrypted message.
     """
-    return filler.caesars_code(message, shift, False)
+    return clap.caesars_code(message, shift, False)
 
 
 def get_corrected_encrypted_message(initial_message, shift):
@@ -36,3 +38,4 @@ def get_corrected_encrypted_message(initial_message, shift):
     :return: Corrected encrypted message.
     """
     return _encrypt_message(_correct_message(initial_message), shift)
+
