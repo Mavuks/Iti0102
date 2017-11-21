@@ -28,6 +28,7 @@ def get_message(initial_message, shift, decrypt=False):
     elif decrypt is False:
         return encoder.get_corrected_encrypted_message(initial_message, shift)
 
-print(_decrypt_message("hello world", 17)) # => qnuux fxaum
-print(_decrypt_message("az!", 1)) # => zy!
+
+print(_decrypt_message("hello world", 17))  # => qnuux fxaum
+print(_decrypt_message("az!", 1))  # => zy!
 print(_decrypt_message("AbCxYz", 10))  # => QrSnOp

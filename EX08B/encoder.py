@@ -1,6 +1,7 @@
 """Encodes message."""
 import filler
 
+
 def _correct_message(message):
     """
     Turn given message into a readable one.
@@ -37,6 +38,6 @@ def get_corrected_encrypted_message(initial_message, shift):
     return _encrypt_message(_correct_message(initial_message), shift)
 
 
-print(_encrypt_message("hello world!", 19)) # => axeeh phkew!
-print(_encrypt_message("az!", 1)) # => ba!
-print(_encrypt_message("AbCxYz", 10)) # => KlMhIj
+print(_encrypt_message("hello world!", 19))  # => axeeh phkew!
+print(_encrypt_message("az!", 1))  # => ba!
+print(_encrypt_message("AbCxYz", 10))  # => KlMhIj
