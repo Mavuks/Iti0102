@@ -20,7 +20,7 @@ class Wand:
     @staticmethod
     def check_wand(wand):
         """Check wand."""
-        if wand.wood_type is None or wand.core is None:
+        if wand.self.wood_type is None or wand.self.core is None:
             raise MismatchError("The wand like that does not exist!")
 
     def __str__(self):
@@ -68,7 +68,7 @@ class School:
         """get wizard by wand."""
 
     def __str__(self):
-        """return scool"""
+        """return school."""
         return self.name
 
 
@@ -78,6 +78,7 @@ class MismatchError(Exception):
 
     Should have user-defined message.
     """
+
     def __init__(self, message):
         """
         Class constructor.
