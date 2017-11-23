@@ -35,8 +35,8 @@ class Wizard:
         """Wdnasifn."""
         self.name = name
         self.wand = wand
-        if not (isinstance(wand, Wand) and hasattr(wand,'wood_tpye',) and hasattr(wand, 'core')):
-            raise MismatchError("The wand like that does not exist!")
+
+
 
 
 
