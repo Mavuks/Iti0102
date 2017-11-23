@@ -23,7 +23,7 @@ class Wand:
 
     def __str__(self):
         """fafdsf."""
-        return "{},{}".format(self.wood_type, self.core)
+        return "{}, {}".format(self.wood_type, self.core)
 
 
 class Wizard:
@@ -43,7 +43,6 @@ class Wizard:
 
     def __str__(self):
         """Return wizard name."""
-
         return self.name
 
 class School:
@@ -77,7 +76,6 @@ class MismatchError(Exception):
 
     Should have user-defined message.
     """
-
     def __init__(self, message):
         """
         Class constructor.
