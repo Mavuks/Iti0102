@@ -11,21 +11,26 @@ class Wand:
 
     def set_wood_type(self, wood_type):
         """Wood type."""
-
+        self.wood_type = wood_type
 
 
     def set_core(self, core):
         """Core."""
+        self.core = core
 
     @staticmethod
     def check_wand(wand):
         """Check wand."""
 
+
     def __str__(self):
         """fafdsf."""
 
+        return "{},{}".format(self.wood_type, self.core)
+
 class Wizard:
     """Wixard."""
+
 
     def __init__(self, name, wand=None):
         """Wdnasifn."""
@@ -35,20 +40,24 @@ class Wizard:
     def set_wand(self, wand):
         """Set wand."""
 
+
     def get_wand(self):
         """get wand."""
-
         return self.wand
 
     def __str__(self):
         """Return wizard name."""
 
+        return self.name
+
 class School:
     """Scool."""
+
 
     def __init__(self, name: str):
         """fddsaffds."""
         self.name = name
+
 
     def add_wizard(self, wizard):
         """add Wizard."""
@@ -57,9 +66,10 @@ class School:
     def remove_wizard(self,wizard):
         """remove wizard."""
 
+
     def get_wizards(self):
         """Get wizards."""
-
+        return self.name
 
     def get_wizard_by_wand(self,wand):
         """get wizard by wand."""
@@ -67,12 +77,7 @@ class School:
 
     def __str__(self):
         """return scool"""
-        return name
-
-
-
-
-
+        return self.name
 
 
 class MismatchError(Exception):
@@ -133,4 +138,3 @@ if __name__ == '__main__':
 
     School.schools.append("Example school")
     assert "Example school" in School.schools
-
