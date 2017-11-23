@@ -35,6 +35,10 @@ class Wizard:
         """Wdnasifn."""
         self.name = name
         self.wand = wand
+        if not (isinstance(wand, Wand) and hasattr(wand,'wood_tpye',) and hasattr(wand, 'core')):
+            raise MismatchError("The wand like that does not exist!")
+
+
 
     def set_wand(self, wand):
         """Set wand."""
@@ -49,7 +53,7 @@ class Wizard:
         return self.name
 
 class School:
-    """Scool."""
+    """School."""
 
     def __init__(self, name: str):
         """fddsaffds."""
