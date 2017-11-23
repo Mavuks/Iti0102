@@ -20,7 +20,7 @@ class Wand:
     @staticmethod
     def check_wand(wand):
         """Check wand."""
-        if wand.self.wood_type is None or wand.self.core is None:
+        if not (isinstance(wand, Wand) and hasattr(wand,'wood_tpye',) and hasattr(wand, 'core')):
             raise MismatchError("The wand like that does not exist!")
 
     def __str__(self):
@@ -38,6 +38,7 @@ class Wizard:
 
     def set_wand(self, wand):
         """Set wand."""
+        self.wand = wand
 
     def get_wand(self):
         """get wand."""
@@ -59,6 +60,7 @@ class School:
 
     def remove_wizard(self,wizard):
         """remove wizard."""
+
 
     def get_wizards(self):
         """Get wizards."""
