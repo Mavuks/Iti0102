@@ -1,5 +1,6 @@
 """nodasicnids."""
 
+
 class Wand:
     """Wand."""
 
@@ -8,11 +9,9 @@ class Wand:
         self.wood_type = wood_type
         self.core = core
 
-
     def set_wood_type(self, wood_type):
         """Wood type."""
         self.wood_type = wood_type
-
 
     def set_core(self, core):
         """Core."""
@@ -22,15 +21,13 @@ class Wand:
     def check_wand(wand):
         """Check wand."""
 
-
     def __str__(self):
         """fafdsf."""
-
         return "{},{}".format(self.wood_type, self.core)
+
 
 class Wizard:
     """Wixard."""
-
 
     def __init__(self, name, wand=None):
         """Wdnasifn."""
@@ -39,7 +36,6 @@ class Wizard:
 
     def set_wand(self, wand):
         """Set wand."""
-
 
     def get_wand(self):
         """get wand."""
@@ -53,19 +49,15 @@ class Wizard:
 class School:
     """Scool."""
 
-
     def __init__(self, name: str):
         """fddsaffds."""
         self.name = name
 
-
     def add_wizard(self, wizard):
         """add Wizard."""
 
-
     def remove_wizard(self,wizard):
         """remove wizard."""
-
 
     def get_wizards(self):
         """Get wizards."""
@@ -73,7 +65,6 @@ class School:
 
     def get_wizard_by_wand(self,wand):
         """get wizard by wand."""
-
 
     def __str__(self):
         """return scool"""
