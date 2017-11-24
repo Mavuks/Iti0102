@@ -52,6 +52,8 @@ class Wizard:
                 raise MismatchError("The wand like that does not exist!")
             else:
                 self.wand = wand
+        else:
+            self.wand = wand
 
     def get_wand(self):
         """get wand."""
