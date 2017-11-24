@@ -32,11 +32,15 @@ class Wizard:
     """Wixard."""
 
     def __init__(self, name, wand=None):
-        """Wdnasifn."""
+        """Wizard."""
         self.name = name
         self.wand = wand
 
-
+        if wand is not None:
+            if not (isinstance(wand, Wand) and hasattr(wand, 'wood_type',) and hasattr(wand, 'core')):
+                raise MismatchError("The wand like that does not exist!")
+        else:
+            pass
 
 
 
@@ -61,6 +65,7 @@ class School:
 
     def add_wizard(self, wizard):
         """add Wizard."""
+
 
     def remove_wizard(self,wizard):
         """remove wizard."""
