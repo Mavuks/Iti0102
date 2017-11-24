@@ -46,7 +46,12 @@ class Wizard:
 
     def set_wand(self, wand):
         """Set wand."""
-        self.wand = wand
+
+        if wand is not None:
+            if not (isinstance(wand, Wand) and hasattr(wand, 'wood_type', ) and hasattr(wand, 'core')):
+                raise MismatchError("The wand like that does not exist!")
+        else:
+            self.wand = wand
 
     def get_wand(self):
         """get wand."""
