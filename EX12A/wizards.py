@@ -62,10 +62,20 @@ class Wizard:
 class School:
     """School."""
 
+    schools = [
+        "Hogwarts School of Witchcraft and Wizardry", "Durmstrang Institute",
+        "Ilvermorny School of Witchcraft and Wizardry", "Castelobruxo",
+        "Beauxbatons Academy of Magic"
+    ]
 
     def __init__(self, name: str):
         """fddsaffds."""
-        self.name = name
+        if name in School.schools:
+            self.name = name
+        else:
+            raise MismatchError("There is no such school!")
+
+        self.wizard = list()
 
     def add_wizard(self, wizard):
         """add Wizard."""
