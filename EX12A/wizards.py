@@ -90,7 +90,7 @@ class School:
 
     def remove_wizard(self,wizard):
         """remove wizard."""
-        list.remove(wizard)
+        list.remove(self.wizard)
 
     def get_wizards(self):
         """Get wizards."""
