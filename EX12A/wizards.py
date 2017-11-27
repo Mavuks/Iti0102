@@ -46,14 +46,12 @@ class Wizard:
     def set_wand(self, wand):
         """Set wand."""
         try:
-            if (isinstance(wand, Wand) and hasattr(wand, 'wood_type', ) and hasattr(wand, 'core')):
-                self.wand = wand
-
-
-        except:
+            Wand.check_wand(wand)
+        except MismatchError:
             raise MismatchError("The wand like that does not exist!")
 
-
+        else:
+            self.wand = wand
 
 
 
@@ -90,7 +88,7 @@ class School:
 
     def remove_wizard(self,wizard):
         """remove wizard."""
-        list.remove(self.wizard)
+
 
     def get_wizards(self):
         """Get wizards."""
