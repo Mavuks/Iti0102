@@ -45,7 +45,7 @@ class Wizard:
 
     def set_wand(self, wand):
         """Set wand."""
-
+        self.wand = wand
 
 
 
