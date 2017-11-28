@@ -81,16 +81,7 @@ class School:
     def add_wizard(self, wizard):
         """add Wizard."""
 
-        if wizard.wand is None:
-            raise MismatchError("It's a filthy muggle!")
-
-        if isinstance(wizard, Wizard):
-            if wizard in self.wizard:
-                return "{} is already studying in this school!".format(wizard.name)
-            else:
-                self.wizard.append(wizard)
-                return "{} started studying in {}.".format(wizard.name, self.name)
-        else:
+        if  not isinstance(self.name, Wizard) or not wizard.name or wizard.wand:
             raise MismatchError("It's a filthy muggle!")
 
 
