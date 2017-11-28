@@ -1,38 +1,36 @@
-"""nodasicnids."""
+"""Wands and Wizards."""
 
 
 class Wand:
-    """Wand."""
-
+    """Class for wand."""
     def __init__(self, wood_type, core):
         """Class constructor."""
         self.wood_type = wood_type
         self.core = core
 
     def set_wood_type(self, wood_type):
-        """Wood type."""
+        """Set the type of wood."""
         self.wood_type = wood_type
 
     def set_core(self, core):
-        """Core."""
+        """Set core."""
         self.core = core
 
     @staticmethod
     def check_wand(wand):
-        """Check wand."""
+        """Check if wand information is correct."""
         if not isinstance(wand, Wand) or not wand.wood_type or not wand.core:
             raise MismatchError("The wand like that does not exist!")
         else:
             return True
 
     def __str__(self):
-        """fafdsf."""
-        return "{}, {}".format(self.wood_type, self.core)
+        """Return wand information."""
+        return f'{self.wood_type}, {self.core}'
 
 
 class Wizard:
-    """Wixard."""
-
+    """Class for wizards."""
     def __init__(self, name, wand=None):
         """Class constructor."""
         self.name = name
@@ -41,44 +39,37 @@ class Wizard:
             Wand.check_wand(wand)
 
     def set_wand(self, wand):
-        """Set wand."""
-        if Wand.check_wand(wand):
-            self.wand = wand
+        """Check Wand."""
+        Wand.check_wand(wand)
+        self.wand = wand
 
     def get_wand(self):
-        """get wand."""
+        """Return wizard wand."""
         return self.wand
 
     def __str__(self):
         """Return wizard name."""
-        return self.name
+        return f'{self.name}'
 
 
 class School:
-    """School."""
-
+    """Class for wizard schools."""
     schools = [
-        "Hogwarts School of Witchcraft and Wizardry", "Durmstrang Institute",
-        "Ilvermorny School of Witchcraft and Wizardry", "Castelobruxo",
-        "Beauxbatons Academy of Magic"
-    ]
+        "Hogwarts School of Witchcraft and Wizardry",
+        "Durmstrang Institute",
+        "Ilvermorny School of Witchcraft and Wizardry",
+        "Castelobruxo", "Beauxbatons Academy of Magic"]
 
     def __init__(self, name: str):
-        """Class constructor."""
+        """School."""
+        self.name = name
         self.wizards = []
-        if name in School.schools:
-            self.name = name
-        else:
+        if name not in School.schools:
             raise MismatchError("There is no such school!")
 
     def add_wizard(self, wizard):
-        """
-        add wizard.
-
-        :param wizard:
-        :return:
-        """
-        if not isinstance(self.name, Wizard) or wizard is None:
+        """Add new wizard."""
+        if not isinstance(wizard, Wizard) or wizard is None:
             raise MismatchError("It's a filthy muggle!")
         elif wizard in self.wizards:
             return f'{wizard} is already studying in this school!'
@@ -87,24 +78,24 @@ class School:
             return f'{wizard} started studying in {self.name}.'
 
     def remove_wizard(self, wizard):
-        """remove wizard."""
+        """Remove wizard."""
         if wizard in self.wizards:
             self.wizards.remove(wizard)
 
     def get_wizards(self):
-        """Get wizards."""
-        return self.name
+        """All school wizards."""
+        return self.wizards
 
     def get_wizard_by_wand(self, wand):
-        """get wizard by wand."""
+        """Find wizard by wand."""
         if wand is not None:
             Wand.check_wand(wand)
         elif wand is None:
             return
 
     def __str__(self):
-        """return school."""
-        return self.name
+        """Return school name."""
+        return f'{self.name}'
 
 
 class MismatchError(Exception):
@@ -113,7 +104,6 @@ class MismatchError(Exception):
 
     Should have user-defined message.
     """
-
     def __init__(self, message):
         """
         Class constructor.
