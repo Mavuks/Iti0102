@@ -45,7 +45,12 @@ class Wizard:
 
     def set_wand(self, wand):
         """Set wand."""
-        self.wand = wand
+        try:
+            Wand.check_wand(wand)
+        except MismatchError:
+            raise MismatchError("The wand like that does not exist!")
+        else:
+            self.wand = wand
 
 
 
@@ -75,7 +80,7 @@ class School:
         else:
             raise MismatchError("There is no such school!")
 
-        self.wizard = list()
+        self.wizard = []
 
     def add_wizard(self, wizard):
         """add Wizard."""
@@ -86,7 +91,7 @@ class School:
 
     def remove_wizard(self,wizard):
         """remove wizard."""
-
+        self.wizard.remove(wizard)
 
     def get_wizards(self):
         """Get wizards."""
