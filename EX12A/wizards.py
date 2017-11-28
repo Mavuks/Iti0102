@@ -75,7 +75,7 @@ class School:
             self.name = name
         else:
             raise MismatchError("There is no such school!")
-        self.wizard = []
+        self.school = []
 
     def add_wizard(self, wizard):
         """add Wizard."""
@@ -84,11 +84,11 @@ class School:
             raise MismatchError("It's a filthy muggle!")
         else:
             pass
-        if wizard in self.wizard:
-            return '{wizard.name} is already studying in this school!'
+        if wizard in self.school:
+            return f"{wizard} is already studying in this school!"
         else:
-            self.wizard.append(wizard)
-            return "{wizard.name} started studying in {self.name}."
+            self.school.append(wizard)
+            return f"{wizard} started studying in {self.name}."
 
 
     def remove_wizard(self,wizard):
@@ -101,6 +101,7 @@ class School:
 
     def get_wizard_by_wand(self,wand):
         """get wizard by wand."""
+
 
     def __str__(self):
         """return school."""
