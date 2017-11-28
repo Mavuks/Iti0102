@@ -53,9 +53,6 @@ class Wizard:
             self.wand = wand
 
 
-
-
-
     def get_wand(self):
         """get wand."""
         return self.wand
@@ -80,13 +77,14 @@ class School:
         else:
             raise MismatchError("There is no such school!")
 
-        self.wizard = list()
+        self.wizard = []
 
     def add_wizard(self, wizard):
         """add Wizard."""
-        if wizard.wand is not None:
-            if not (isinstance(wizard.wand, Wand) and hasattr(wizard.wand, 'wood_type',) and hasattr(wizard.wand, 'core')):
-                raise MismatchError("It's a filthy muggle!")
+
+        if isinstance(wizard, Wizard) and isinstance(Wand.wand, Wizard) and hasattr(Wand.wand, 'wood_type',) and hasattr(Wand.wand, 'core'):
+            self.wizard.append(wizard)
+
 
 
     def remove_wizard(self,wizard):
