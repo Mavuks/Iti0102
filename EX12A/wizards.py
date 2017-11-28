@@ -20,8 +20,9 @@ class Wand:
     @staticmethod
     def check_wand(wand):
         """Check wand."""
-        if not (isinstance(wand, Wand) and hasattr(wand,'wood_tpye',) and hasattr(wand, 'core')):
+        if not isinstance(wand, Wand) or not wand.wood_type or not wand.core:
             raise MismatchError("The wand like that does not exist!")
+
 
     def __str__(self):
         """fafdsf."""
@@ -45,11 +46,7 @@ class Wizard:
 
     def set_wand(self, wand):
         """Set wand."""
-        try:
-            Wand.check_wand(wand)
-        except MismatchError:
-            raise MismatchError("The wand like that does not exist!")
-        else:
+        if Wand.check_wand(wand):
             self.wand = wand
 
 
@@ -72,7 +69,7 @@ class School:
 
     def __init__(self, name: str):
         """Class constructor."""
-        self.name = name
+        # self.name = name
         if name in School.schools:
             self.name = name
         else:
@@ -91,7 +88,7 @@ class School:
                 return "{} is already studying in this school!".format(wizard.name)
             else:
                 self.wizard.append(wizard)
-                return "{} started studying in {}.".format(wizard.name, school.name)
+                return "{} started studying in {}.".format(wizard.name, School.name)
         else:
             raise MismatchError("It's a filthy muggle!")
 
