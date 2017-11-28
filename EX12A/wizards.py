@@ -72,6 +72,7 @@ class School:
 
     def __init__(self, name: str):
         """Class constructor."""
+        self.name = name
         if name in School.schools:
             self.name = name
         else:
@@ -86,8 +87,13 @@ class School:
             raise MismatchError("It's a filthy muggle!")
 
         if isinstance(wizard, Wizard):
-            self.wizard.append(wizard)
-            # return f"{Wizard.name} started studying in {School name}."
+            if wizard in self.wizard:
+                return "{} is already studying in this school!".format(wizard.name)
+            else:
+                self.wizard.append(wizard)
+                return f"{wizard.name} started studying in {school.name}."
+        else:
+            raise MismatchError("It's a filthy muggle!")
 
 
 
