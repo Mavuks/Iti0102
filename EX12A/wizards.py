@@ -34,15 +34,15 @@ class Wizard:
 
     def __init__(self, name, wand=None):
         """Class constructor."""
-        self.name = name
-        self.wand = wand
-
-        if wand is not None:
-            if not (isinstance(wand, Wand) and hasattr(wand, 'wood_type',) and hasattr(wand, 'core')):
-                raise MismatchError("The wand like that does not exist!")
-        else:
-            pass
-
+        if name:
+            self.name = name
+            if wand:
+                if Wand.check_wand(wand) is True:
+                    self.wand = wand
+                else:
+                    raise MismatchError("The wand like that does not exist!")
+            else:
+                self.wand = wand
 
     def set_wand(self, wand):
         """Set wand."""
