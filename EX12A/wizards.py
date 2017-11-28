@@ -83,8 +83,11 @@ class School:
 
         if  not isinstance(self.name, Wizard) or not wizard.name or wizard.wand:
             raise MismatchError("It's a filthy muggle!")
-
-
+        if wizard in self.wizard:
+            return '{wizard.name} is already studying in this school!'
+        else:
+            self.wizard.append(wizard)
+            return "{wizard.name} started studying in {self.name}."
 
 
     def remove_wizard(self,wizard):
