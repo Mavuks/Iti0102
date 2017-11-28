@@ -93,7 +93,8 @@ class School:
 
     def remove_wizard(self, wizard):
         """remove wizard."""
-        self.wizards.remove(wizard)
+        if wizard in self.wizards:
+            self.wizards.remove(wizard)
 
     def get_wizards(self):
         """Get wizards."""
