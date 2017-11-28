@@ -22,7 +22,8 @@ class Wand:
         """Check wand."""
         if not isinstance(wand, Wand) or not wand.wood_type or not wand.core:
             raise MismatchError("The wand like that does not exist!")
-
+        else:
+            return True
 
     def __str__(self):
         """fafdsf."""
