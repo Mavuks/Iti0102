@@ -82,8 +82,13 @@ class School:
     def add_wizard(self, wizard):
         """add Wizard."""
 
-        if isinstance(wizard, Wizard) and isinstance(Wand.wand, Wizard) and hasattr(Wand.wand, 'wood_type',) and hasattr(Wand.wand, 'core'):
+        if Wizard.wand is None:
+            raise MismatchError("It's a filthy muggle!")
+
+        if isinstance(wizard, Wizard):
             self.wizard.append(wizard)
+            return f"{wizard.name} started studying in {school.name}."
+
 
 
 
