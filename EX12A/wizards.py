@@ -35,15 +35,10 @@ class Wizard:
 
     def __init__(self, name, wand=None):
         """Class constructor."""
-        if name:
-            self.name = name
-            if wand:
-                if Wand.check_wand(wand) is True:
-                    self.wand = wand
-                else:
-                    raise MismatchError("The wand like that does not exist!")
-            else:
-                self.wand = wand
+        self.name = name
+        self.wand = wand
+        if wand is not None:
+            Wand.check_wand(wand)
 
     def set_wand(self, wand):
         """Set wand."""
@@ -83,7 +78,7 @@ class School:
         :param wizard:
         :return:
         """
-        if not isinstance(wizard, Wizard) or wizard is None:
+        if not isinstance(self.name, Wizard) or wizard is None:
             raise MismatchError("It's a filthy muggle!")
         elif wizard in self.wizards:
             return f'{wizard} is already studying in this school!'
