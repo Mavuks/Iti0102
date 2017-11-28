@@ -88,10 +88,11 @@ class School:
 
     def get_wizard_by_wand(self, wand):
         """Find wizard by wand."""
-        if wand is not None:
-            Wand.check_wand(wand)
-        elif wand is None:
-            return
+        Wand.check_wand(wand)
+        for wizard in self.wizards:
+            if wizard.get_wand() == wand:
+                return wizard
+        return None
 
     def __str__(self):
         """Return school name."""
