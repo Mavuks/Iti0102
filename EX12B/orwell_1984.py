@@ -20,14 +20,16 @@ class Citizen:
         self.status = status
         if status not in Citizen.allowed_statuses:
             self.Status = "citizen"
-        if status is "prole":
-            self.party = None
-        if status is "nonperson":
-            self.name = None
-            self.party = None
+            if status is "prole":
+                self.party = None
+            if status is "nonperson":
+                self.name = None
+                self.party = None
         self.party = []
         if self.party is not None:
-            self.party.append(Citizen)
+            self.party.append(name)
+        else:
+            pass
 
 
 
