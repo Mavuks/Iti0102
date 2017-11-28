@@ -80,7 +80,7 @@ class School:
     def add_wizard(self, wizard):
         """add Wizard."""
 
-        if not isinstance(self.name, Wizard) or not wizard.name or not wizard.wand:
+        if  not isinstance(wizard, Wizard) or wizard.name is None or wizard.wand is None:
             raise MismatchError("It's a filthy muggle!")
         else:
             pass
@@ -93,7 +93,7 @@ class School:
 
     def remove_wizard(self,wizard):
         """remove wizard."""
-        self.wizard.remove(wizard)
+        self.school.remove(wizard)
 
     def get_wizards(self):
         """Get wizards."""
