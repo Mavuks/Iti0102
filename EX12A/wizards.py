@@ -108,6 +108,7 @@ class MismatchError(Exception):
 
     Should have user-defined message.
     """
+
     def __init__(self, message):
         """
         Class constructor.
