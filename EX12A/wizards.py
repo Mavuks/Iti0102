@@ -58,9 +58,9 @@ class Wizard:
         """Return wizard name."""
         return self.name
 
+
 class School:
     """School."""
-
 
     schools = [
         "Hogwarts School of Witchcraft and Wizardry", "Durmstrang Institute",
