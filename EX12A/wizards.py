@@ -83,14 +83,13 @@ class School:
         :param wizard:
         :return:
         """
-        if isinstance(self.name, Wizard) is False or wizard.name is None or wizard.wand is None:
+        if not isinstance(wizard, Wizard) or wizard is None:
             raise MismatchError("It's a filthy muggle!")
-
-        if wizard in self.wizards:
-            return f'{wizard.name} is already studying in this school!'
+        elif wizard in self.wizards:
+            return f'{wizard} is already studying in this school!'
         else:
             self.wizards.append(wizard)
-            return f'{wizard.name} started studying in {self.name}.'
+            return f'{wizard} started studying in {self.name}.'
 
     def remove_wizard(self, wizard):
         """remove wizard."""
@@ -102,6 +101,10 @@ class School:
 
     def get_wizard_by_wand(self, wand):
         """get wizard by wand."""
+        if wand is not None:
+            Wand.check_wand(wand)
+        elif wand is None:
+            return
 
     def __str__(self):
         """return school."""
