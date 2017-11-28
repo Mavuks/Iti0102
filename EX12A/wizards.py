@@ -87,7 +87,7 @@ class School:
 
         if isinstance(wizard, Wizard):
             self.wizard.append(wizard)
-            return f"{wizard.name} started studying in {school.name}."
+            # return f"{Wizard.name} started studying in {School name}."
 
 
 
