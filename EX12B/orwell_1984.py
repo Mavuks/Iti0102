@@ -5,6 +5,8 @@
 class Citizen:
     """Class which represents a single citizen."""
 
+    allowed_statuses = ["citizen", "prole", "nonperson", "under surveillance"]
+
     def __init__(self, name, party, status="citizen"):
         """
         Class constructor.
@@ -16,6 +18,19 @@ class Citizen:
         self.name = name
         self.party = party
         self.status = status
+        if status not in Citizen.allowed_statuses:
+            self.Status = "citizen"
+        if status is "prole":
+            self.party = None
+        if status is "nonperson":
+            self.name = None
+            self.party = None
+        self.party = []
+        if self.party is not None:
+            self.party.append(Citizen)
+
+
+
 
     def set_party(self, party):
         """
