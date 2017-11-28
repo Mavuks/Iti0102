@@ -82,7 +82,7 @@ class School:
     def add_wizard(self, wizard):
         """add Wizard."""
 
-        if Wizard.wand is None:
+        if wizard.wand is None:
             raise MismatchError("It's a filthy muggle!")
 
         if isinstance(wizard, Wizard):
