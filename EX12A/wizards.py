@@ -70,15 +70,19 @@ class School:
 
     def __init__(self, name: str):
         """Class constructor."""
-        # self.name = name
+        self.wizards = []
         if name in School.schools:
             self.name = name
         else:
             raise MismatchError("There is no such school!")
-        self.wizards = []
 
     def add_wizard(self, wizard):
-        """add Wizard."""
+        """
+        add wizard.
+
+        :param wizard:
+        :return:
+        """
         if isinstance(wizard, Wizard) is False or wizard.name is None or wizard.wand is None:
             raise MismatchError("It's a filthy muggle!")
 
