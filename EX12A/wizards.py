@@ -89,7 +89,7 @@ class School:
                 return "{} is already studying in this school!".format(wizard.name)
             else:
                 self.wizard.append(wizard)
-                return "{} started studying in {}.".format(wizard.name, School.name)
+                return "{} started studying in {}.".format(wizard.name, self.name)
         else:
             raise MismatchError("It's a filthy muggle!")
 
