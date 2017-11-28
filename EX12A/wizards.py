@@ -2,8 +2,9 @@
 
 
 class Wand:
-
     """Class for wand."""
+
+
     def __init__(self, wood_type, core):
         """Class constructor."""
         self.wood_type = wood_type
@@ -31,8 +32,9 @@ class Wand:
 
 
 class Wizard:
-
     """Class for wizards."""
+
+
     def __init__(self, name, wand=None):
         """Class constructor."""
         self.name = name
@@ -55,8 +57,9 @@ class Wizard:
 
 
 class School:
-
     """Class for wizard schools."""
+
+
     schools = [
         "Hogwarts School of Witchcraft and Wizardry",
         "Durmstrang Institute",
