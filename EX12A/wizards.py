@@ -75,25 +75,23 @@ class School:
             self.name = name
         else:
             raise MismatchError("There is no such school!")
-        self.school = []
+        self.wizards = []
 
     def add_wizard(self, wizard):
         """add Wizard."""
-
         if isinstance(wizard, Wizard) is False or wizard.name is None or wizard.wand is None:
             raise MismatchError("It's a filthy muggle!")
+
+        if wizard in self.wizards:
+            return f'{wizard.name} is already studying in this school!'
         else:
-            pass
-        if wizard in self.school:
-            return f"{wizard} is already studying in this school!"
-        else:
-            self.school.append(wizard)
-            return f"{wizard} started studying in {self.name}."
+            self.wizards.append(wizard)
+            return f'{wizard.name} started studying in {self.name}.'
 
 
     def remove_wizard(self,wizard):
         """remove wizard."""
-        self.school.remove(wizard)
+        self.wizards.remove(wizard)
 
     def get_wizards(self):
         """Get wizards."""
