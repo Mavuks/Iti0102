@@ -83,7 +83,7 @@ class School:
         :param wizard:
         :return:
         """
-        if isinstance(wizard, Wizard) is False or wizard.name is None or wizard.wand is None:
+        if isinstance(self.name, Wizard) is False or wizard.name is None or wizard.wand is None:
             raise MismatchError("It's a filthy muggle!")
 
         if wizard in self.wizards:
