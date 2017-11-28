@@ -80,7 +80,7 @@ class School:
         else:
             raise MismatchError("There is no such school!")
 
-        self.wizard = []
+        self.wizard = list()
 
     def add_wizard(self, wizard):
         """add Wizard."""
