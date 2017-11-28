@@ -50,7 +50,6 @@ class Wizard:
         if Wand.check_wand(wand):
             self.wand = wand
 
-
     def get_wand(self):
         """get wand."""
         return self.wand
@@ -61,6 +60,7 @@ class Wizard:
 
 class School:
     """School."""
+
 
     schools = [
         "Hogwarts School of Witchcraft and Wizardry", "Durmstrang Institute",
@@ -92,8 +92,7 @@ class School:
             self.wizards.append(wizard)
             return f'{wizard.name} started studying in {self.name}.'
 
-
-    def remove_wizard(self,wizard):
+    def remove_wizard(self, wizard):
         """remove wizard."""
         self.wizards.remove(wizard)
 
@@ -101,9 +100,8 @@ class School:
         """Get wizards."""
         return self.name
 
-    def get_wizard_by_wand(self,wand):
+    def get_wizard_by_wand(self, wand):
         """get wizard by wand."""
-
 
     def __str__(self):
         """return school."""
