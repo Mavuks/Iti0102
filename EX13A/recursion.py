@@ -22,7 +22,10 @@ def recursive_reverse(s: str) -> str:
     :param s: input string
     :return: reversed input string
     """
-    pass
+    if s == "":
+        return s
+    else:
+        return recursive_reverse(s[1:]) + s[0]
 
 
 def loop_sum(n: int) -> int:
@@ -32,7 +35,11 @@ def loop_sum(n: int) -> int:
     :param n: the last number to add to the sum
     :return: sum
     """
-    pass
+    sum = 0
+    while(n > 0):
+        sum += n
+        n -= 1
+    return sum
 
 
 def recursive_sum(n: int) -> int:
@@ -42,13 +49,17 @@ def recursive_sum(n: int) -> int:
     :param n: the last number to add to the sum
     :return: sum
     """
-    pass
+    if n == 0:
+        return 0
+    else:
+        return n + recursive_sum(n - 1)
 
 
 if __name__ == '__main__':
     print(loop_reverse("hello"))  # -> "olleh"
     print(recursive_reverse("A"))  # -> "A"
     print(recursive_reverse(""))  # -> ""
+    print(recursive_reverse("Tere, olen Märten.."))
     print(loop_sum(3))  # -> 6
     print(recursive_sum(95))  # -> 4560
     print(recursive_sum(0))  # -> 0
