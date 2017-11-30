@@ -24,9 +24,10 @@ def how_many_calls(n):
     elif n == 3:
         return 4
     elif n > 3:
-        return int (how_many_calls(n - 1) + how_many_calls(n - 2) + how_many_calls(n - 3))
+        return int(how_many_calls(n - 1) + how_many_calls(n - 2) + how_many_calls(n - 3))
 
-@lru_cache(maxsize = 1000)
+
+@lru_cache(maxsize=1000)
 def how_many_people(n):
     """
     Return the number of people who know after n minutes has passed.
@@ -46,12 +47,8 @@ def how_many_people(n):
          return how_many_people(n - 1) + how_many_calls(n)
 
 
-
-
-
-
 if __name__ == "__main__":
-    print(how_many_calls(2))  # -> 2
+    print(how_many_calls(0))  # -> 2
     print(how_many_calls(4))  # -> 7
     print(how_many_calls(10))  # -> 274
     print(how_many_people(1))  # -> 4
