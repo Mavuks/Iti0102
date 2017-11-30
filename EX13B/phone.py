@@ -32,11 +32,16 @@ def how_many_people(n):
     Arguments:
     n -- how many minutes has passed.
     """
-    if n < 0:
-        return None
-    if n == 1:
-        return 1
-    # if n > 2:
+    # if type(n) != int:
+    #     return None
+    # elif n < 0:
+    #     return None
+    # elif n == 0:
+    #     return 1
+    # elif n == 1:
+    #     return 2
+    # elif n > 2:
+    #      return how_many_people(n) + how_many_calls(n)
 
 
 
@@ -44,7 +49,7 @@ def how_many_people(n):
 
 
 if __name__ == "__main__":
-    print(how_many_calls("tra"))  # -> 2
+    print(how_many_calls(2))  # -> 2
     print(how_many_calls(4))  # -> 7
     print(how_many_calls(10))  # -> 274
     print(how_many_people(2))  # -> 4
