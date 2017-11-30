@@ -16,7 +16,7 @@ def how_many_calls(n):
     elif n < 0:
         return None
     elif n == 0:
-        return 0
+        return 1
     elif n == 1:
         return 1
     elif n == 2:
@@ -44,7 +44,7 @@ def how_many_people(n):
     elif n == 1:
         return 2
     elif n > 1:
-         return how_many_people(n - 1) + how_many_calls(n)
+        return how_many_people(n - 1) + how_many_calls(n)
 
 
 if __name__ == "__main__":
