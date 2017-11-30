@@ -40,7 +40,7 @@ class Citizen:
 
         :param party: new party (Inner or Outer, both are Party class instances)
         """
-        pass
+
 
     def get_party(self):
         """
