@@ -23,7 +23,8 @@ def get_nearby_stops(api_base, lat, lng):
 
         # read json to python object
         data = json.loads(contents.decode('utf-8'))
-        print(data)
+        nearby_stops.append(data)
+        return nearby_stops
 
 def get_nearest_stop(api_base, lat, lng):
     """
