@@ -1,6 +1,8 @@
 """Retrieve stops and departures info from REST service."""
 import json
 import urllib.request
+from operator import itemgetter
+import collections
 
 API_BASE = "https://public-transport-api.herokuapp.com"
 REGION = "tallinn"
@@ -18,13 +20,12 @@ def get_nearby_stops(api_base, lat, lng):
     nearby_stops = []
     with urllib.request.urlopen("https://public-transport-api.herokuapp.com/stops/{}/{}".format(lat, lng)) as f:
         contents = f.read()
-
-        print(contents.decode("utf-8"))
-
         # read json to python object
         data = json.loads(contents.decode('utf-8'))
         nearby_stops.append(data)
-        return nearby_stops
+        # nearby_stops1 = collections.OrderedDict('distance')
+
+        return min(nearby_stops)
 
 def get_nearest_stop(api_base, lat, lng):
     """
@@ -35,7 +36,7 @@ def get_nearest_stop(api_base, lat, lng):
     :param lng: Longitude
     :return: Nearest stop
     """
-    return None     # TODO: Remove this and replace something actually useful
+    return None
 
 
 def get_next_departures(api_base, region, stop_id):
@@ -47,7 +48,7 @@ def get_next_departures(api_base, region, stop_id):
     :param stop_id: Stop ID
     :return: List of next departures from stop
     """
-    return None     # TODO: Remove this and replace something actually useful
+    return None
 
 
 def get_next_departure(api_base, region, stop_id):
@@ -59,7 +60,7 @@ def get_next_departure(api_base, region, stop_id):
     :param stop_id: Stop ID
     :return: Next departure from stop
     """
-    return None     # TODO: Remove this and replace something actually useful
+    return None
 
 
 if __name__ == '__main__':
