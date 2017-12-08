@@ -23,8 +23,6 @@ def get_nearby_stops(api_base, lat, lng):
         # read json to python object
         data = json.loads(contents.decode('utf-8'))
         nearby_stops.append(data)
-        # nearby_stops1 = collections.OrderedDict('distance')
-
         return min(nearby_stops)
 
 def get_nearest_stop(api_base, lat, lng):
@@ -36,7 +34,7 @@ def get_nearest_stop(api_base, lat, lng):
     :param lng: Longitude
     :return: Nearest stop
     """
-    return None
+    return get_nearby_stops(api_base, lat, lng)[0]
 
 
 def get_next_departures(api_base, region, stop_id):
