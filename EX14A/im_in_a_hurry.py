@@ -17,7 +17,7 @@ def get_nearby_stops(api_base, lat, lng):
     :return: List of all nearby stops
     """
     nearby_stops = []
-    with urllib.request.urlopen("https://public-transport-api.herokuapp.com/stops/{}/{}".format(lat, lng)) as f:
+    with urllib.request.urlopen(api_base + "/stops/" + str(lat) + "/" + str(lng)) as f:
         contents = f.read()
         # read json to python object
         data = json.loads(contents.decode('utf-8'))
