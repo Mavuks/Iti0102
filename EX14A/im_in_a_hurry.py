@@ -1,8 +1,7 @@
 """Retrieve stops and departures info from REST service."""
 import json
 import urllib.request
-from operator import itemgetter
-import collections
+
 
 API_BASE = "https://public-transport-api.herokuapp.com"
 REGION = "tallinn"
@@ -34,7 +33,7 @@ def get_nearest_stop(api_base, lat, lng):
     :param lng: Longitude
     :return: Nearest stop
     """
-    return get_nearby_stops(api_base, lat, lng)[0]
+    # return min(get_nearby_stops(api_base, lat, lng))[0]
 
 
 def get_next_departures(api_base, region, stop_id):
