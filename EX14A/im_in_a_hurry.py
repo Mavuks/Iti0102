@@ -53,7 +53,7 @@ def get_next_departures(api_base, region, stop_id):
     with urllib.request.urlopen(api_base + "/departures/"  + region + "/" + str(stop_id)) as f:
         contents = f.read()
         data = json.loads(contents.decode('utf-8'))
-    return data
+    return data['departures']
 
 
 def get_next_departure(api_base, region, stop_id):
@@ -65,7 +65,7 @@ def get_next_departure(api_base, region, stop_id):
     :param stop_id: Stop ID
     :return: Next departure from stop
     """
-    return None
+    return get_next_departures(api_base, region, stop_id)[0]
 
 
 if __name__ == '__main__':
