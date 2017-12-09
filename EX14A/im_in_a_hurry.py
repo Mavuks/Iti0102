@@ -1,6 +1,7 @@
 """Retrieve stops and departures info from REST service."""
 import json
 import urllib.request
+import operator
 
 
 API_BASE = "https://public-transport-api.herokuapp.com"
@@ -16,13 +17,15 @@ def get_nearby_stops(api_base, lat, lng):
     :param lng: Longitude
     :return: List of all nearby stops
     """
-    nearby_stops = []
+    if api_base == "" or lat == "" or lng == "":
+        return None
     with urllib.request.urlopen(api_base + "/stops/" + str(lat) + "/" + str(lng)) as f:
         contents = f.read()
-        # read json to python object
         data = json.loads(contents.decode('utf-8'))
-        nearby_stops.append(data)
-    return (nearby_stops)
+        sorted_data = sorted(data, key=lambda x: int(x['distance'].split(" ")[0]))
+
+    return sorted_data
+
 
 def get_nearest_stop(api_base, lat, lng):
     """
