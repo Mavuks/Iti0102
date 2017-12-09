@@ -1,7 +1,7 @@
 """Retrieve stops and departures info from REST service."""
 import json
 import urllib.request
-import operator
+
 
 
 API_BASE = "https://public-transport-api.herokuapp.com"
@@ -48,7 +48,10 @@ def get_next_departures(api_base, region, stop_id):
     :param stop_id: Stop ID
     :return: List of next departures from stop
     """
-    return None
+    with urllib.request.urlopen(api_base + "/departures/"  + region + "/" + str(stop_id)) as f:
+        contents = f.read()
+        data = json.loads(contents.decode('utf-8'))
+    return data
 
 
 def get_next_departure(api_base, region, stop_id):
