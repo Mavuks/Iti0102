@@ -3,7 +3,6 @@ import json
 import urllib.request
 
 
-
 API_BASE = "https://public-transport-api.herokuapp.com"
 REGION = "tallinn"
 
@@ -53,7 +52,7 @@ def get_next_departures(api_base, region, stop_id):
     """
     if api_base == "" or stop_id == "" or region == "":
         return None
-    with urllib.request.urlopen(api_base + "/departures/"  + region + "/" + str(stop_id)) as f:
+    with urllib.request.urlopen(api_base + "/departures/" + region + "/" + str(stop_id)) as f:
         contents = f.read()
         data = json.loads(contents.decode('utf-8'))
     return data['departures']
