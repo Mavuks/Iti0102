@@ -48,6 +48,8 @@ def get_next_departures(api_base, region, stop_id):
     :param stop_id: Stop ID
     :return: List of next departures from stop
     """
+    if api_base == "" or stop_id == "" or region == "":
+        return None
     with urllib.request.urlopen(api_base + "/departures/"  + region + "/" + str(stop_id)) as f:
         contents = f.read()
         data = json.loads(contents.decode('utf-8'))
