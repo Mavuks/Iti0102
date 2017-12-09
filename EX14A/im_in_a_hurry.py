@@ -65,6 +65,8 @@ def get_next_departure(api_base, region, stop_id):
     :param stop_id: Stop ID
     :return: Next departure from stop
     """
+    if len(get_next_departures(api_base, region, stop_id)) < 0:
+        return None
     return get_next_departures(api_base, region, stop_id)[0]
 
 

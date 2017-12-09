@@ -13,7 +13,7 @@ def get_end(piece, true_message):
             elif piece[char] not in ("/#$%^&*@0123456789"):
                 break
 
-
+2
 def give_corrected_piece(piece):
     """Give corrected piece."""
     true_message = []

@@ -50,7 +50,7 @@ def how_many_people(n):
 if __name__ == "__main__":
     print(how_many_calls(0))  # -> 2
     print(how_many_calls(4))  # -> 7
-    print(how_many_calls(10))  # -> 274
+    print(how_many_calls(200))  # -> 274
     print(how_many_people(1))  # -> 4
     print(how_many_people(4))  # -> 15
-    print(how_many_people(10))  # -> 600
+    print(how_many_people(200))  # -> 600
