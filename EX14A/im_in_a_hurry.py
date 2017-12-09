@@ -36,7 +36,10 @@ def get_nearest_stop(api_base, lat, lng):
     :param lng: Longitude
     :return: Nearest stop
     """
-    return get_nearby_stops(api_base, lat, lng)[0]
+    try:
+        return get_nearby_stops(api_base, lat, lng)[0]
+    except Exception:
+        return None
 
 
 def get_next_departures(api_base, region, stop_id):
