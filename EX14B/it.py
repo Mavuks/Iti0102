@@ -29,7 +29,20 @@ print(f"EX02 FUNCTION NAME: {rsa.decrypt(mes01, private_key)}")
 
 def finder(row, col):
 
+    pass
 
-
-if __name__ == '__main__':
-    print(get_lines(106042)[1] - 1)
+# if __name__ == '__main__':
+#     print(get_lines(106042)[1] - 1)
+    assert finder(1, 1) == 1
+    assert finder(1, 2) == 2
+    assert finder(1, 3) == 4
+    assert finder(1, 4) == 7
+    assert finder(2, 1) == 3
+    assert finder(3, 1) == 6
+    assert finder(4, 1) == 10
+    assert finder(5, 3) == 26
+    assert finder(4, 4) == 25
+    assert finder(3, 5) == 24
+    assert finder(15, 28) == 876
+    assert finder(99, 100) == 19602
+    assert finder(39132, 4923) == 970394563
