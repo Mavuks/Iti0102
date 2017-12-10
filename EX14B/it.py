@@ -1,11 +1,12 @@
-
+"""IT."""
 import math
 #import rsa
+
 
 def get_lines(initial_line_length: float) -> tuple:
     """get lines."""
     y = initial_line_length
-    x = (3 * y - math.sqrt((3*y)**2 - 4 * y**2)) / 2
+    x = (3 * y - math.sqrt((3 * y)**2 - 4 * y**2)) / 2
     my_tuple = (round(x), round(y-x))
     return my_tuple
 
@@ -30,11 +31,10 @@ def get_lines(initial_line_length: float) -> tuple:
 
 def finder(row, col):
     """fndjsbfj."""
-
     temp_row = row
     row_sum = 0
     col_sum = 0
-    while temp_row > 0 :
+    while temp_row > 0:
         row_sum += temp_row
         temp_row -= 1
     col -= 2
@@ -46,8 +46,7 @@ def finder(row, col):
 
 def clocky(hour, minute):
     """fdsfds."""
-
-    if hour  < 1:
+    if hour < 1:
         return -1
     if minute < 0:
         return -1
@@ -57,8 +56,6 @@ def clocky(hour, minute):
         return -1
     if hour == 12:
         hour = 0
-
-
     nurk1 = 30 * hour
     nurk2 = 6 * minute
     return abs(nurk1 - nurk2)

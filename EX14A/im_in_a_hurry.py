@@ -2,7 +2,6 @@
 import json
 import urllib.request
 
-
 API_BASE = "https://public-transport-api.herokuapp.com"
 REGION = "tallinn"
 
