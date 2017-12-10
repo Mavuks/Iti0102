@@ -47,23 +47,23 @@ def finder(row, col):
 def clocky(hour, minute):
     """fdsfds."""
 
+    if hour  < 1:
+        return -1
+    if minute < 0:
+        return -1
     if hour > 12:
         return -1
-
     if minute > 59:
         return -1
     if hour == 12:
         hour = 0
-    if hour  < 0:
-        return -1
-    if minute < 0:
-        return -1
 
-    nurk1 = 30*hour
-    nurk2 = 6*minute
+
+    nurk1 = 30 * hour
+    nurk2 = 6 * minute
     return abs(nurk1 - nurk2)
 
 
 if __name__ == '__main__':
     print(get_lines(106042)[1] - 1)
-    print(clocky(0, 45))
+    print(clocky(12, 45))
