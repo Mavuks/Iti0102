@@ -1,6 +1,6 @@
 
 import math
-import rsa
+#import rsa
 
 def get_lines(initial_line_length: float) -> tuple:
     """get lines."""
