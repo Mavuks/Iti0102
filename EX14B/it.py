@@ -30,8 +30,7 @@ def get_lines(initial_line_length: float) -> tuple:
 
 def finder(row, col):
     """fndjsbfj."""
-    if row and col == 1:
-        return 1
+
     temp_row = row
     row_sum = 0
     col_sum = 0
