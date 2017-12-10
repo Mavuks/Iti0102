@@ -49,10 +49,13 @@ def clocky(hour, minute):
 
     if hour > 12:
         return -1
+
     if minute > 59:
         return -1
     if hour == 12:
         hour = 0
+    if hour or minute < 0:
+        return -1
 
     nurk1 = 30*hour
     nurk2 = 6*minute
