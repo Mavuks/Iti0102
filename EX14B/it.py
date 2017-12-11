@@ -2,13 +2,12 @@
 import math
 
 
-
 def get_lines(initial_line_length: float) -> tuple:
     """get lines."""
     y = initial_line_length
     x = (3 * y - math.sqrt((3 * y)**2 - 4 * y**2)) / 2
-    #my_tuple = (round(x), round(y-x))
-    #return my_tuple
+    # my_tuple = (round(x), round(y-x))
+    # return my_tuple
     return round(x), round(y - x)
 
 # # Install the rsa package before running (Alt+Enter -> Install rsa package)
