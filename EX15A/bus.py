@@ -6,14 +6,12 @@ class Main:
 
     def __init__(self, file: str):
         """initi."""
-
         self.given_minutes = 0
         self.closest_time = 0
         self.departing_minutes = self.format_text(file)
 
     def format_text(self, file: str):
         """Format text."""
-
         departing_minutes = []
         with open(file) as text:
             for line in text:
@@ -43,7 +41,6 @@ class Main:
 
     def ask_user_time(self):
         """User time."""
-
         given_time = input()
         if ":" in given_time:
             given_time = given_time.split(":")
