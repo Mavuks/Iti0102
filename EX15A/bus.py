@@ -41,7 +41,7 @@ class Main:
 
     def ask_user_time(self):
         """User time."""
-        given_time = input()
+        given_time = input("Sisestage kellaaeg:")
         if ":" in given_time:
             given_time = given_time.split(":")
             if given_time[0].isnumeric() and given_time[1].isnumeric():
@@ -49,3 +49,5 @@ class Main:
                     if 0 <= int(given_time[0]) < 25 and 0 <= int(given_time[1]) <= 59:
                         return int(given_time[0]), int(given_time[1])
         raise Exception
+
+Main("bussiajad.txt").get_departure_time()
