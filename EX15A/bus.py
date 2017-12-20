@@ -52,7 +52,3 @@ class Main:
                     if 0 <= int(given_time[0]) < 25 and 0 <= int(given_time[1]) <= 59:
                         return int(given_time[0]), int(given_time[1])
         raise Exception
-
-
-
-Main("bussiajad.txt").get_departure_time()
