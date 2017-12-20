@@ -37,7 +37,7 @@ class Main:
         hours = self.closest_time // 60
         minutes = str(self.closest_time % 60).zfill(2)
         print("Your bus will depart at {HH}:{mm}".format(HH=hours, mm=minutes))
-        return "Your bus will depart at {HH}:{mm}".format(HH=hours, mm=minutes)
+        # return "Your bus will depart at {HH}:{mm}".format(HH=hours, mm=minutes)
 
     def ask_user_time(self):
         """User time."""
@@ -49,5 +49,3 @@ class Main:
                     if 0 <= int(given_time[0]) < 25 and 0 <= int(given_time[1]) <= 59:
                         return int(given_time[0]), int(given_time[1])
         raise Exception
-
-M
