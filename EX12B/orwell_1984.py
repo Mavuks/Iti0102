@@ -31,16 +31,12 @@ class Citizen:
         else:
             pass
 
-
-
-
     def set_party(self, party):
         """
         Set citizen's party. The method does not return anything.
 
         :param party: new party (Inner or Outer, both are Party class instances)
         """
-
 
     def get_party(self):
         """
