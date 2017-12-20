@@ -87,6 +87,7 @@ class Citizen:
         pass
         return f"BIG BROTHER IS WATCHING YOU, {self.name}"
 
+
 class Party:
     """Party class."""
 
