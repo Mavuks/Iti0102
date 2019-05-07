@@ -1,5 +1,6 @@
 """When will my bus leave?."""
 
+import datetime
 
 class Main:
     """Main class."""
@@ -41,11 +42,21 @@ class Main:
 
     def ask_user_time(self):
         """User time."""
-        given_time = input("Sisestage kellaaeg:")
-        if ":" in given_time:
-            given_time = given_time.split(":")
-            if given_time[0].isnumeric() and given_time[1].isnumeric():
-                if 1 <= len(given_time[0]) <= 2 and len(given_time[1]) == 2:
-                    if 0 <= int(given_time[0]) < 25 and 0 <= int(given_time[1]) <= 59:
-                        return int(given_time[0]), int(given_time[1])
-        raise Exception
+        # given_time = input("Sisestage kellaaeg:")
+        # if ":" in given_time:
+        #     given_time = given_time.split(":")
+        #     if given_time[0].isnumeric() and given_time[1].isnumeric():
+        #         if 1 <= len(given_time[0]) <= 2 and len(given_time[1]) == 2:
+        #             if 0 <= int(given_time[0]) < 25 and 0 <= int(given_time[1]) <= 59:
+        #                 return int(given_time[0]), int(given_time[1])
+        # raise Exception
+        timeformat = "%H:%M"
+        time = input("What's your time?")
+        try:
+            given_time = datetime.datetime.strptime(time, timeformat)
+            return int(given_time[0]), int(given_time[1])
+        except ValueError:
+            print("Use HH:SS format!")
+
+
+Main("bussiajad.txt").get_departure_time()
